@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Jesse&#39;s Blog</title>
-        <link>https://JiashuaiXu.github.io/</link>
-        <description>Recent content on Jesse&#39;s Blog</description>
+        <title>NixOS on Jesse&#39;s Blog</title>
+        <link>https://JiashuaiXu.github.io/tags/nixos/</link>
+        <description>Recent content in NixOS on Jesse&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 26 Feb 2025 12:00:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Feb 2025 12:00:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/nixos/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>我的第一篇博客</title>
         <link>https://JiashuaiXu.github.io/posts/my-first-post/</link>
         <pubDate>Wed, 26 Feb 2025 12:00:00 +0800</pubDate>

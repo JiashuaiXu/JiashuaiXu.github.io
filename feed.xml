@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Jesse&#39;s Blog</title>
+    <link>https://JiashuaiXu.github.io/</link>
+    <description>Recent content on Jesse&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 26 Feb 2025 12:00:00 +0800</lastBuildDate>
+    <atom:link href="https://JiashuaiXu.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://JiashuaiXu.github.io/about/</link>
+      <pubDate>Wed, 26 Feb 2025 12:00:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/about/</guid>
+      <description>&lt;h1 id=&#34;about-this-blog&#34;&gt;About This Blog&lt;/h1&gt;
+&lt;p&gt;Welcome to Jesse&amp;rsquo;s Blog! This is a personal space where I share my thoughts, experiences, and learnings.&lt;/p&gt;
+&lt;h2 id=&#34;using-obsidian-with-hugo&#34;&gt;Using Obsidian with Hugo&lt;/h2&gt;
+&lt;p&gt;This blog is powered by &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; with the &lt;a href=&#34;https://github.com/adityatelange/hugo-PaperMod&#34;&gt;PaperMod&lt;/a&gt; theme. I write my content using &lt;a href=&#34;https://obsidian.md/&#34;&gt;Obsidian&lt;/a&gt;, a powerful knowledge management tool, and then publish it to this Hugo site.&lt;/p&gt;
+&lt;h2 id=&#34;contact&#34;&gt;Contact&lt;/h2&gt;
+&lt;p&gt;Feel free to reach out to me through GitHub or other social platforms.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>我的第一篇博客</title>
+      <link>https://JiashuaiXu.github.io/posts/my-first-post/</link>
+      <pubDate>Wed, 26 Feb 2025 12:00:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/my-first-post/</guid>
+      <description>&lt;p&gt;这是我的第一篇 Hugo 博客，使用 Nix Flakes 和 Hugo Stack 主题搭建。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

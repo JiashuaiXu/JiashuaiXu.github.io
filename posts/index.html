@@ -153,6 +153,95 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">博客自动化部署配置全记录
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>博客自动化部署配置全记录 记录从零开始搭建 Hugo &#43; Obsidian &#43; GitHub Actions 自动化博客系统的完整过程。
+🎯 目标 实现一个完全自动化的博客发布流程：
+在 Obsidian 中编写 Markdown 文章 提交到 Git 仓库 自动编译并发布到 GitHub Pages 🏗️ 架构设计 仓库结构 hugo-server (主仓库) ├── jesse-blog/ │ ├── content/ → obsidian-notes (子模块) │ ├── public/ → JiashuaiXu.github.io (子模块) │ ├── themes/ │ └── hugo.toml └── flake.nix obsidian-notes (内容仓库) ├── posts/ ├── about/ ├── archive/ └── .github/workflows/ └── deploy.yml # 自动部署工作流 JiashuaiXu.github.io (部署仓库) └── (Hugo 生成的静态文件) 三个仓库的职责 仓库 用途 操作频率 hugo-server Hugo 项目配置、主题管理 偶尔更新 obsidian-notes 编写内容（日常操作） 频繁提交 JiashuaiXu.github.io 托管静态网站 自动更新 📝 实施步骤 1. 子模块化内容管理 问题： 原来 content/ 目录直接在主仓库中，不便于独立管理。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-11 17:36:00 +0800 CST'>November 11, 2025</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>Jesse</span></footer>
+  <a class="entry-link" aria-label="post link to 博客自动化部署配置全记录" href="https://JiashuaiXu.github.io/posts/blog-automation-setup/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">✅ 工作流配置已修复
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>工作流已修复 修复了 .gitmodules 中缺失的 content 子模块配置。
+问题原因 GitHub Actions 在 checkout 时无法找到 jesse-blog/content 的子模块 URL。
+解决方案 在 .gitmodules 中添加：
+[submodule &#34;jesse-blog/content&#34;] path = jesse-blog/content url = https://github.com/JiashuaiXu/obsidian-notes.git 现在应该可以正常部署了！🎉
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-11 17:28:00 +0800 CST'>November 11, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Jesse</span></footer>
+  <a class="entry-link" aria-label="post link to ✅ 工作流配置已修复" href="https://JiashuaiXu.github.io/posts/workflow-fixed/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">🚀 测试自动部署功能
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>自动部署测试 这是一篇测试文章，用于验证 GitHub Actions 自动部署是否正常工作。
+测试时间 创建时间：2025-11-11 17:14 目的：验证从 obsidian-notes 推送后能否自动编译并发布 预期结果 ✅ GitHub Actions 自动触发 ✅ 使用 Nix 环境编译 Hugo 站点 ✅ 推送到 JiashuaiXu.github.io ✅ 网站更新生效 如果你看到这篇文章，说明自动部署成功了！🎉
+工作流程回顾：
+graph LR A[编写文章] --&gt; B[git push obsidian-notes] B --&gt; C[GitHub Actions 触发] C --&gt; D[Nix 编译 Hugo] D --&gt; E[推送到 GitHub Pages] E --&gt; F[网站自动更新] 完美！✨
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-11 17:14:00 +0800 CST'>November 11, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Jesse</span></footer>
+  <a class="entry-link" aria-label="post link to 🚀 测试自动部署功能" href="https://JiashuaiXu.github.io/posts/test-auto-deploy/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">使用 Nix Flakes 管理 Hugo 开发环境
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>使用 Nix Flakes 管理 Hugo 开发环境 Nix Flakes 提供了可复现的开发环境，完美适配 Hugo 项目。
+为什么选择 Nix？ 可复现性：任何人都能获得完全相同的环境 隔离性：不污染系统环境 版本锁定：确保依赖版本一致 flake.nix 配置 { description = &#34;Hugo Development Environment&#34;; inputs = { nixpkgs.url = &#34;github:NixOS/nixpkgs/nixpkgs-unstable&#34;; }; outputs = { self, nixpkgs }: { devShells.default = pkgs.mkShell { buildInputs = [ pkgs.hugo pkgs.git ]; }; }; } 使用方法 # 进入开发环境 nix develop # 启动本地服务器 hugo server -D # 构建站点 hugo -D 简单高效！⚡
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-11 17:01:00 +0800 CST'>November 11, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Jesse</span></footer>
+  <a class="entry-link" aria-label="post link to 使用 Nix Flakes 管理 Hugo 开发环境" href="https://JiashuaiXu.github.io/posts/nix-hugo-setup/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Obsidian 与 Hugo 完美集成
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Obsidian 与 Hugo 完美集成 使用 Obsidian 管理笔记内容，通过 Git 子模块连接到 Hugo 站点。
+优势 📝 在 Obsidian 中舒适地写作 🔄 通过 Git 版本控制 🚀 自动发布到博客 🎨 保持 Markdown 格式一致 工作流 # 1. 在 Obsidian 中编写 # 2. 提交到 obsidian-notes 仓库 git add . git commit -m &#34;New article&#34; git push # 3. GitHub Actions 自动完成剩余工作！ 完美的写作体验！✨
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-11 17:00:00 +0800 CST'>November 11, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Jesse</span></footer>
+  <a class="entry-link" aria-label="post link to Obsidian 与 Hugo 完美集成" href="https://JiashuaiXu.github.io/posts/obsidian-integration/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">测试 GitHub Actions 自动部署
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>GitHub Actions 自动部署测试 这是一篇测试文章，用于验证 GitHub Actions 自动部署功能。
+功能特性 ✅ 自动编译 Hugo 站点 ✅ 自动推送到 GitHub Pages ✅ 使用 Nix 环境管理依赖 工作流程 提交内容到 obsidian-notes 仓库 GitHub Actions 自动触发 编译生成静态网站 推送到 JiashuaiXu.github.io 太酷了！🚀
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-11-11 16:59:00 +0800 CST'>November 11, 2025</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>Jesse</span></footer>
+  <a class="entry-link" aria-label="post link to 测试 GitHub Actions 自动部署" href="https://JiashuaiXu.github.io/posts/test-github-actions/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">我的第一篇博客
     </h2>
   </header>

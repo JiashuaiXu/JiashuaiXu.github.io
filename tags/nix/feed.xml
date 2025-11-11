@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nix on Jesse&#39;s Blog</title>
+    <link>https://JiashuaiXu.github.io/tags/nix/</link>
+    <description>Recent content in Nix on Jesse&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Nov 2025 17:36:00 +0800</lastBuildDate>
+    <atom:link href="https://JiashuaiXu.github.io/tags/nix/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客自动化部署配置全记录</title>
+      <link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link>
+      <pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid>
+      <description>&lt;h1 id=&#34;博客自动化部署配置全记录&#34;&gt;博客自动化部署配置全记录&lt;/h1&gt;
+&lt;p&gt;记录从零开始搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程。&lt;/p&gt;
+&lt;h2 id=&#34;-目标&#34;&gt;🎯 目标&lt;/h2&gt;
+&lt;p&gt;实现一个完全自动化的博客发布流程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 Obsidian 中编写 Markdown 文章&lt;/li&gt;
+&lt;li&gt;提交到 Git 仓库&lt;/li&gt;
+&lt;li&gt;自动编译并发布到 GitHub Pages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-架构设计&#34;&gt;🏗️ 架构设计&lt;/h2&gt;
+&lt;h3 id=&#34;仓库结构&#34;&gt;仓库结构&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo-server (主仓库)
+├── jesse-blog/
+│   ├── content/          → obsidian-notes (子模块)
+│   ├── public/           → JiashuaiXu.github.io (子模块)
+│   ├── themes/
+│   └── hugo.toml
+└── flake.nix
+
+obsidian-notes (内容仓库)
+├── posts/
+├── about/
+├── archive/
+└── .github/workflows/
+    └── deploy.yml        # 自动部署工作流
+
+JiashuaiXu.github.io (部署仓库)
+└── (Hugo 生成的静态文件)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;三个仓库的职责&#34;&gt;三个仓库的职责&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;仓库&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+          &lt;th&gt;操作频率&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hugo 项目配置、主题管理&lt;/td&gt;
+          &lt;td&gt;偶尔更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常操作）&lt;/td&gt;
+          &lt;td&gt;频繁提交&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;托管静态网站&lt;/td&gt;
+          &lt;td&gt;自动更新&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-实施步骤&#34;&gt;📝 实施步骤&lt;/h2&gt;
+&lt;h3 id=&#34;1-子模块化内容管理&#34;&gt;1. 子模块化内容管理&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>使用 Nix Flakes 管理 Hugo 开发环境</title>
+      <link>https://JiashuaiXu.github.io/posts/nix-hugo-setup/</link>
+      <pubDate>Tue, 11 Nov 2025 17:01:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/nix-hugo-setup/</guid>
+      <description>&lt;h1 id=&#34;使用-nix-flakes-管理-hugo-开发环境&#34;&gt;使用 Nix Flakes 管理 Hugo 开发环境&lt;/h1&gt;
+&lt;p&gt;Nix Flakes 提供了可复现的开发环境，完美适配 Hugo 项目。&lt;/p&gt;
+&lt;h2 id=&#34;为什么选择-nix&#34;&gt;为什么选择 Nix？&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;可复现性&lt;/strong&gt;：任何人都能获得完全相同的环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;隔离性&lt;/strong&gt;：不污染系统环境&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;版本锁定&lt;/strong&gt;：确保依赖版本一致&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;flakenix-配置&#34;&gt;flake.nix 配置&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-nix&#34; data-lang=&#34;nix&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  description &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hugo Development Environment&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  inputs &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    nixpkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;github:NixOS/nixpkgs/nixpkgs-unstable&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  outputs &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; { self&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; nixpkgs }: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    devShells&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;default &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; pkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;mkShell {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      buildInputs &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; [ pkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;hugo pkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;git ];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  };
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 进入开发环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nix develop
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 启动本地服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 构建站点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;简单高效！⚡&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

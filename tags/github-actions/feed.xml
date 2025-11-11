@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>GitHub Actions on Jesse&#39;s Blog</title>
+    <link>https://JiashuaiXu.github.io/tags/github-actions/</link>
+    <description>Recent content in GitHub Actions on Jesse&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 11 Nov 2025 17:36:00 +0800</lastBuildDate>
+    <atom:link href="https://JiashuaiXu.github.io/tags/github-actions/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>博客自动化部署配置全记录</title>
+      <link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link>
+      <pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid>
+      <description>&lt;h1 id=&#34;博客自动化部署配置全记录&#34;&gt;博客自动化部署配置全记录&lt;/h1&gt;
+&lt;p&gt;记录从零开始搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程。&lt;/p&gt;
+&lt;h2 id=&#34;-目标&#34;&gt;🎯 目标&lt;/h2&gt;
+&lt;p&gt;实现一个完全自动化的博客发布流程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在 Obsidian 中编写 Markdown 文章&lt;/li&gt;
+&lt;li&gt;提交到 Git 仓库&lt;/li&gt;
+&lt;li&gt;自动编译并发布到 GitHub Pages&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;-架构设计&#34;&gt;🏗️ 架构设计&lt;/h2&gt;
+&lt;h3 id=&#34;仓库结构&#34;&gt;仓库结构&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo-server (主仓库)
+├── jesse-blog/
+│   ├── content/          → obsidian-notes (子模块)
+│   ├── public/           → JiashuaiXu.github.io (子模块)
+│   ├── themes/
+│   └── hugo.toml
+└── flake.nix
+
+obsidian-notes (内容仓库)
+├── posts/
+├── about/
+├── archive/
+└── .github/workflows/
+    └── deploy.yml        # 自动部署工作流
+
+JiashuaiXu.github.io (部署仓库)
+└── (Hugo 生成的静态文件)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;三个仓库的职责&#34;&gt;三个仓库的职责&lt;/h3&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;仓库&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+          &lt;th&gt;操作频率&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hugo 项目配置、主题管理&lt;/td&gt;
+          &lt;td&gt;偶尔更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常操作）&lt;/td&gt;
+          &lt;td&gt;频繁提交&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;托管静态网站&lt;/td&gt;
+          &lt;td&gt;自动更新&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;-实施步骤&#34;&gt;📝 实施步骤&lt;/h2&gt;
+&lt;h3 id=&#34;1-子模块化内容管理&#34;&gt;1. 子模块化内容管理&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>✅ 工作流配置已修复</title>
+      <link>https://JiashuaiXu.github.io/posts/workflow-fixed/</link>
+      <pubDate>Tue, 11 Nov 2025 17:28:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/workflow-fixed/</guid>
+      <description>&lt;h1 id=&#34;工作流已修复&#34;&gt;工作流已修复&lt;/h1&gt;
+&lt;p&gt;修复了 &lt;code&gt;.gitmodules&lt;/code&gt; 中缺失的 &lt;code&gt;content&lt;/code&gt; 子模块配置。&lt;/p&gt;
+&lt;h2 id=&#34;问题原因&#34;&gt;问题原因&lt;/h2&gt;
+&lt;p&gt;GitHub Actions 在 checkout 时无法找到 &lt;code&gt;jesse-blog/content&lt;/code&gt; 的子模块 URL。&lt;/p&gt;
+&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
+&lt;p&gt;在 &lt;code&gt;.gitmodules&lt;/code&gt; 中添加：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;[submodule &amp;#34;jesse-blog/content&amp;#34;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#50fa7b&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;jesse-blog/content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;    url = https://github.com/JiashuaiXu/obsidian-notes.git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在应该可以正常部署了！🎉&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>🚀 测试自动部署功能</title>
+      <link>https://JiashuaiXu.github.io/posts/test-auto-deploy/</link>
+      <pubDate>Tue, 11 Nov 2025 17:14:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/test-auto-deploy/</guid>
+      <description>&lt;h1 id=&#34;自动部署测试&#34;&gt;自动部署测试&lt;/h1&gt;
+&lt;p&gt;这是一篇测试文章，用于验证 GitHub Actions 自动部署是否正常工作。&lt;/p&gt;
+&lt;h2 id=&#34;测试时间&#34;&gt;测试时间&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;创建时间：2025-11-11 17:14&lt;/li&gt;
+&lt;li&gt;目的：验证从 &lt;code&gt;obsidian-notes&lt;/code&gt; 推送后能否自动编译并发布&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;预期结果&#34;&gt;预期结果&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;✅ GitHub Actions 自动触发&lt;/li&gt;
+&lt;li&gt;✅ 使用 Nix 环境编译 Hugo 站点&lt;/li&gt;
+&lt;li&gt;✅ 推送到 &lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;✅ 网站更新生效&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你看到这篇文章，说明自动部署成功了！🎉&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;工作流程回顾：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph LR
+    A[编写文章] --&amp;gt; B[git push obsidian-notes]
+    B --&amp;gt; C[GitHub Actions 触发]
+    C --&amp;gt; D[Nix 编译 Hugo]
+    D --&amp;gt; E[推送到 GitHub Pages]
+    E --&amp;gt; F[网站自动更新]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完美！✨&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>测试 GitHub Actions 自动部署</title>
+      <link>https://JiashuaiXu.github.io/posts/test-github-actions/</link>
+      <pubDate>Tue, 11 Nov 2025 16:59:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/test-github-actions/</guid>
+      <description>&lt;h1 id=&#34;github-actions-自动部署测试&#34;&gt;GitHub Actions 自动部署测试&lt;/h1&gt;
+&lt;p&gt;这是一篇测试文章，用于验证 GitHub Actions 自动部署功能。&lt;/p&gt;
+&lt;h2 id=&#34;功能特性&#34;&gt;功能特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;✅ 自动编译 Hugo 站点&lt;/li&gt;
+&lt;li&gt;✅ 自动推送到 GitHub Pages&lt;/li&gt;
+&lt;li&gt;✅ 使用 Nix 环境管理依赖&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;工作流程&#34;&gt;工作流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;提交内容到 &lt;code&gt;obsidian-notes&lt;/code&gt; 仓库&lt;/li&gt;
+&lt;li&gt;GitHub Actions 自动触发&lt;/li&gt;
+&lt;li&gt;编译生成静态网站&lt;/li&gt;
+&lt;li&gt;推送到 &lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;太酷了！🚀&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

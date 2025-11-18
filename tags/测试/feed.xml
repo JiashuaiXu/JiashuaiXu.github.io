@@ -1,26 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>测试 on Jesse&#39;s Blog</title>
-    <link>https://JiashuaiXu.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
-    <description>Recent content in 测试 on Jesse&#39;s Blog</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 11 Nov 2025 17:14:00 +0800</lastBuildDate>
-    <atom:link href="https://JiashuaiXu.github.io/tags/%E6%B5%8B%E8%AF%95/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>🚀 测试自动部署功能</title>
-      <link>https://JiashuaiXu.github.io/posts/test-auto-deploy/</link>
-      <pubDate>Tue, 11 Nov 2025 17:14:00 +0800</pubDate>
-      <guid>https://JiashuaiXu.github.io/posts/test-auto-deploy/</guid>
-      <description>&lt;h1 id=&#34;自动部署测试&#34;&gt;自动部署测试&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>测试 on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/%E6%B5%8B%E8%AF%95/</link><description>Recent content in 测试 on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 11 Nov 2025 17:14:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/%E6%B5%8B%E8%AF%95/feed.xml" rel="self" type="application/rss+xml"/><item><title>🚀 测试自动部署功能</title><link>https://JiashuaiXu.github.io/posts/test-auto-deploy/</link><pubDate>Tue, 11 Nov 2025 17:14:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/test-auto-deploy/</guid><description>&lt;h1 id="-测试自动部署功能"&gt;🚀 测试自动部署功能&lt;/h1&gt;
 &lt;p&gt;这是一篇测试文章，用于验证 GitHub Actions 自动部署是否正常工作。&lt;/p&gt;
-&lt;h2 id=&#34;测试时间&#34;&gt;测试时间&lt;/h2&gt;
+&lt;h2 id="测试时间"&gt;测试时间&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;创建时间：2025-11-11 17:14&lt;/li&gt;
 &lt;li&gt;目的：验证从 &lt;code&gt;obsidian-notes&lt;/code&gt; 推送后能否自动编译并发布&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;预期结果&#34;&gt;预期结果&lt;/h2&gt;
+&lt;h2 id="预期结果"&gt;预期结果&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;✅ GitHub Actions 自动触发&lt;/li&gt;
 &lt;li&gt;✅ 使用 Nix 环境编译 Hugo 站点&lt;/li&gt;
@@ -30,35 +15,28 @@
 &lt;p&gt;如果你看到这篇文章，说明自动部署成功了！🎉&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;工作流程回顾：&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph LR
-    A[编写文章] --&amp;gt; B[git push obsidian-notes]
-    B --&amp;gt; C[GitHub Actions 触发]
-    C --&amp;gt; D[Nix 编译 Hugo]
-    D --&amp;gt; E[推送到 GitHub Pages]
-    E --&amp;gt; F[网站自动更新]
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完美！✨&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>测试 GitHub Actions 自动部署</title>
-      <link>https://JiashuaiXu.github.io/posts/test-github-actions/</link>
-      <pubDate>Tue, 11 Nov 2025 16:59:00 +0800</pubDate>
-      <guid>https://JiashuaiXu.github.io/posts/test-github-actions/</guid>
-      <description>&lt;h1 id=&#34;github-actions-自动部署测试&#34;&gt;GitHub Actions 自动部署测试&lt;/h1&gt;
+&lt;pre tabindex="0"&gt;&lt;code class="language-mermaid" data-lang="mermaid"&gt;graph LR
+A[编写文章] --&amp;gt; B[git push obsidian-notes]
+B --&amp;gt; C[GitHub Actions 触发]
+C --&amp;gt; D[Nix 编译 Hugo]
+D --&amp;gt; E[推送到 GitHub Pages]
+E --&amp;gt; F[网站自动更新]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;完美！✨&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/posts/test-github-actions/</link><pubDate>Tue, 11 Nov 2025 16:59:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/test-github-actions/</guid><description>&lt;h1 id="测试github-actions-自动部署测试"&gt;测试GitHub Actions 自动部署测试&lt;/h1&gt;
 &lt;p&gt;这是一篇测试文章，用于验证 GitHub Actions 自动部署功能。&lt;/p&gt;
-&lt;h2 id=&#34;功能特性&#34;&gt;功能特性&lt;/h2&gt;
+&lt;h2 id="功能特性"&gt;功能特性&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;✅ 自动编译 Hugo 站点&lt;/li&gt;
 &lt;li&gt;✅ 自动推送到 GitHub Pages&lt;/li&gt;
 &lt;li&gt;✅ 使用 Nix 环境管理依赖&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;工作流程&#34;&gt;工作流程&lt;/h2&gt;
+&lt;h2 id="工作流程"&gt;工作流程&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;提交内容到 &lt;code&gt;obsidian-notes&lt;/code&gt; 仓库&lt;/li&gt;
+&lt;li&gt;提交内容到 &lt;code&gt;obsidian-notes&lt;/code&gt; 仓库
+&lt;ol&gt;
 &lt;li&gt;GitHub Actions 自动触发&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
 &lt;li&gt;编译生成静态网站&lt;/li&gt;
 &lt;li&gt;推送到 &lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;太酷了！🚀&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;p&gt;太酷了！🚀&lt;/p&gt;</description></item></channel></rss>

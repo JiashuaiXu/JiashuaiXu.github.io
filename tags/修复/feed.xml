@@ -1,28 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>修复 on Jesse&#39;s Blog</title>
-    <link>https://JiashuaiXu.github.io/tags/%E4%BF%AE%E5%A4%8D/</link>
-    <description>Recent content in 修复 on Jesse&#39;s Blog</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 11 Nov 2025 17:28:00 +0800</lastBuildDate>
-    <atom:link href="https://JiashuaiXu.github.io/tags/%E4%BF%AE%E5%A4%8D/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>✅ 工作流配置已修复</title>
-      <link>https://JiashuaiXu.github.io/posts/workflow-fixed/</link>
-      <pubDate>Tue, 11 Nov 2025 17:28:00 +0800</pubDate>
-      <guid>https://JiashuaiXu.github.io/posts/workflow-fixed/</guid>
-      <description>&lt;h1 id=&#34;工作流已修复&#34;&gt;工作流已修复&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>修复 on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/%E4%BF%AE%E5%A4%8D/</link><description>Recent content in 修复 on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 11 Nov 2025 17:28:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/%E4%BF%AE%E5%A4%8D/feed.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://JiashuaiXu.github.io/posts/workflow-fixed/</link><pubDate>Tue, 11 Nov 2025 17:28:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/workflow-fixed/</guid><description>&lt;h1 id="工作流配置已修复"&gt;✅工作流配置已修复&lt;/h1&gt;
 &lt;p&gt;修复了 &lt;code&gt;.gitmodules&lt;/code&gt; 中缺失的 &lt;code&gt;content&lt;/code&gt; 子模块配置。&lt;/p&gt;
-&lt;h2 id=&#34;问题原因&#34;&gt;问题原因&lt;/h2&gt;
+&lt;h2 id="问题原因"&gt;问题原因&lt;/h2&gt;
 &lt;p&gt;GitHub Actions 在 checkout 时无法找到 &lt;code&gt;jesse-blog/content&lt;/code&gt; 的子模块 URL。&lt;/p&gt;
-&lt;h2 id=&#34;解决方案&#34;&gt;解决方案&lt;/h2&gt;
+&lt;h2 id="解决方案"&gt;解决方案&lt;/h2&gt;
 &lt;p&gt;在 &lt;code&gt;.gitmodules&lt;/code&gt; 中添加：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ff79c6&#34;&gt;[submodule &amp;#34;jesse-blog/content&amp;#34;]&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#50fa7b&#34;&gt;path&lt;/span&gt; &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;jesse-blog/content
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f1fa8c&#34;&gt;    url = https://github.com/JiashuaiXu/obsidian-notes.git&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在应该可以正常部署了！🎉&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-ini" data-lang="ini"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#ff79c6"&gt;[submodule &amp;#34;jesse-blog/content&amp;#34;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#50fa7b"&gt;path&lt;/span&gt; &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;jesse-blog/content
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#f1fa8c"&gt; url = https://github.com/JiashuaiXu/obsidian-notes.git&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;现在应该可以正常部署了！🎉&lt;/p&gt;</description></item></channel></rss>

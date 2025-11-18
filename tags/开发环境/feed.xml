@@ -1,50 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>开发环境 on Jesse&#39;s Blog</title>
-    <link>https://JiashuaiXu.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link>
-    <description>Recent content in 开发环境 on Jesse&#39;s Blog</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 11 Nov 2025 17:01:00 +0800</lastBuildDate>
-    <atom:link href="https://JiashuaiXu.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>使用 Nix Flakes 管理 Hugo 开发环境</title>
-      <link>https://JiashuaiXu.github.io/posts/nix-hugo-setup/</link>
-      <pubDate>Tue, 11 Nov 2025 17:01:00 +0800</pubDate>
-      <guid>https://JiashuaiXu.github.io/posts/nix-hugo-setup/</guid>
-      <description>&lt;h1 id=&#34;使用-nix-flakes-管理-hugo-开发环境&#34;&gt;使用 Nix Flakes 管理 Hugo 开发环境&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>开发环境 on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/</link><description>Recent content in 开发环境 on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 11 Nov 2025 17:01:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/feed.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://JiashuaiXu.github.io/posts/nix-hugo-setup/</link><pubDate>Tue, 11 Nov 2025 17:01:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/nix-hugo-setup/</guid><description>&lt;h1 id="使用-nix-flakes-管理-hugo-开发环境"&gt;使用 Nix Flakes 管理 Hugo 开发环境&lt;/h1&gt;
 &lt;p&gt;Nix Flakes 提供了可复现的开发环境，完美适配 Hugo 项目。&lt;/p&gt;
-&lt;h2 id=&#34;为什么选择-nix&#34;&gt;为什么选择 Nix？&lt;/h2&gt;
+&lt;h2 id="为什么选择-nix"&gt;为什么选择 Nix？&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;可复现性&lt;/strong&gt;：任何人都能获得完全相同的环境&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;隔离性&lt;/strong&gt;：不污染系统环境&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;版本锁定&lt;/strong&gt;：确保依赖版本一致&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;flakenix-配置&#34;&gt;flake.nix 配置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-nix&#34; data-lang=&#34;nix&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  description &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;Hugo Development Environment&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  inputs &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    nixpkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;url &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;github:NixOS/nixpkgs/nixpkgs-unstable&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  };
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  outputs &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; { self&lt;span style=&#34;color:#ff79c6&#34;&gt;,&lt;/span&gt; nixpkgs }: {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    devShells&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;default &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; pkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;mkShell {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      buildInputs &lt;span style=&#34;color:#ff79c6&#34;&gt;=&lt;/span&gt; [ pkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;hugo pkgs&lt;span style=&#34;color:#ff79c6&#34;&gt;.&lt;/span&gt;git ];
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    };
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  };
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用方法&#34;&gt;使用方法&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 进入开发环境&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nix develop
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 启动本地服务器&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 构建站点&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo -D
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;简单高效！⚡&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h2 id="flakenix-配置"&gt;flake.nix 配置&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-nix" data-lang="nix"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; description &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;Hugo Development Environment&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; inputs &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; nixpkgs&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;url &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; &lt;span style="color:#f1fa8c"&gt;&amp;#34;github:NixOS/nixpkgs/nixpkgs-unstable&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; outputs &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; { self&lt;span style="color:#ff79c6"&gt;,&lt;/span&gt; nixpkgs }: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; devShells&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;default &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; pkgs&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;mkShell {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; buildInputs &lt;span style="color:#ff79c6"&gt;=&lt;/span&gt; [ pkgs&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;hugo pkgs&lt;span style="color:#ff79c6"&gt;.&lt;/span&gt;git ];
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; };
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="使用方法"&gt;使用方法&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 进入开发环境&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;nix develop
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 启动本地服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 构建站点&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;hugo -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;简单高效！⚡&lt;/p&gt;</description></item></channel></rss>

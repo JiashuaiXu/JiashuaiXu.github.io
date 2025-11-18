@@ -17,7 +17,10 @@
 &lt;p&gt;测试时间：2025-11-18 11:11&lt;/p&gt;
 &lt;h2 id="第二次测试"&gt;第二次测试&lt;/h2&gt;
 &lt;p&gt;修复了 workflow 后的测试运行。&lt;/p&gt;
-&lt;p&gt;时间：Tue Nov 18 07:17:04 PM CST 2025&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</link><pubDate>Tue, 11 Nov 2025 17:50:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</guid><description>&lt;h1 id="hugo-博客自动化工作流完整指南"&gt;Hugo 博客自动化工作流完整指南&lt;/h1&gt;
+&lt;p&gt;时间：Tue Nov 18 07:17:04 PM CST 2025&lt;/p&gt;
+&lt;h2 id="第三次测试---移除-public-submodule-后"&gt;第三次测试 - 移除 public submodule 后&lt;/h2&gt;
+&lt;p&gt;简化后的架构测试。&lt;/p&gt;
+&lt;p&gt;时间：Tue Nov 18 07:21:14 PM CST 2025&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</link><pubDate>Tue, 11 Nov 2025 17:50:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</guid><description>&lt;h1 id="hugo-博客自动化工作流完整指南"&gt;Hugo 博客自动化工作流完整指南&lt;/h1&gt;
 &lt;p&gt;这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="-目录"&gt;📋 目录&lt;/h2&gt;

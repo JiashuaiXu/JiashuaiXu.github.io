@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Jesse's Blog</title><link>https://JiashuaiXu.github.io/</link><description>Recent content on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>en-us</language><lastBuildDate>Tue, 18 Nov 2025 11:11:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/feed.xml" rel="self" type="application/rss+xml"/><item><title>测试自动化部署</title><link>https://JiashuaiXu.github.io/posts/test-automated-deployment/</link><pubDate>Tue, 18 Nov 2025 11:11:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/test-automated-deployment/</guid><description>&lt;h1 id="测试自动化部署"&gt;测试自动化部署&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Jesse's Blog</title><link>https://JiashuaiXu.github.io/</link><description>Recent content on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>zh-cn</language><lastBuildDate>Tue, 18 Nov 2025 11:11:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/feed.xml" rel="self" type="application/rss+xml"/><item><title>测试自动化部署</title><link>https://JiashuaiXu.github.io/posts/test-automated-deployment/</link><pubDate>Tue, 18 Nov 2025 11:11:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/test-automated-deployment/</guid><description>&lt;h1 id="测试自动化部署"&gt;测试自动化部署&lt;/h1&gt;
 &lt;p&gt;这是一篇测试文章，用于验证 GitHub Actions 自动部署流程是否正常工作。&lt;/p&gt;
 &lt;h2 id="工作流程"&gt;工作流程&lt;/h2&gt;
 &lt;ol&gt;
@@ -273,41 +273,34 @@ E --&amp;gt; F[网站自动更新]
 &lt;h2 id="using-obsidian-with-hugo"&gt;Using Obsidian with Hugo&lt;/h2&gt;
 &lt;p&gt;This blog is powered by &lt;a href="https://gohugo.io/"&gt;Hugo&lt;/a&gt; with the &lt;a href="https://github.com/adityatelange/hugo-PaperMod"&gt;PaperMod&lt;/a&gt; theme. I write my content using &lt;a href="https://obsidian.md/"&gt;Obsidian&lt;/a&gt;, a powerful knowledge management tool, and then publish it to this Hugo site.&lt;/p&gt;
 &lt;h2 id="contact"&gt;Contact&lt;/h2&gt;
-&lt;p&gt;Feel free to reach out to me through GitHub or other social platforms.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/readme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/readme/</guid><description>&lt;h1 id="obsidian-notes-for-hugo-blog"&gt;Obsidian Notes for Hugo Blog&lt;/h1&gt;
-&lt;p&gt;这是 Jesse&amp;rsquo;s Blog 的内容仓库，使用 Obsidian 管理笔记并自动发布到 Hugo 博客。&lt;/p&gt;
-&lt;h2 id="-目录结构"&gt;📁 目录结构&lt;/h2&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;.
-├── posts/ # 博客文章
-├── about/ # 关于页面
-├── archive/ # 归档页面
-└── .github/ # GitHub Actions 工作流
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="-自动部署"&gt;🚀 自动部署&lt;/h2&gt;
-&lt;p&gt;每次推送到 &lt;code&gt;main&lt;/code&gt; 分支时，GitHub Actions 会自动：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;检出 &lt;code&gt;hugo-server&lt;/code&gt; 主仓库&lt;/li&gt;
-&lt;li&gt;使用 Nix 环境编译 Hugo 站点&lt;/li&gt;
-&lt;li&gt;推送生成的静态文件到 &lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;更新主仓库的子模块引用&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="-设置要求"&gt;⚙️ 设置要求&lt;/h2&gt;
-&lt;p&gt;在 GitHub 仓库设置中添加 Secret：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;GH_PAT&lt;/code&gt;: Personal Access Token，需要有以下权限：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;repo&lt;/code&gt; (完整仓库访问权限)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;workflow&lt;/code&gt; (更新 GitHub Actions 工作流)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="创建-personal-access-token"&gt;创建 Personal Access Token&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;访问 &lt;a href="https://github.com/settings/tokens"&gt;GitHub Settings &amp;gt; Developer settings &amp;gt; Personal access tokens &amp;gt; Tokens (classic)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;点击 &amp;ldquo;Generate new token (classic)&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;选择权限：&lt;code&gt;repo&lt;/code&gt;, &lt;code&gt;workflow&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;生成并复制 token&lt;/li&gt;
-&lt;li&gt;在 &lt;code&gt;obsidian-notes&lt;/code&gt; 仓库设置中：Settings &amp;gt; Secrets and variables &amp;gt; Actions &amp;gt; New repository secret&lt;/li&gt;
-&lt;li&gt;Name: &lt;code&gt;GH_PAT&lt;/code&gt;, Value: 粘贴你的 token&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id="-使用-obsidian-写作"&gt;✍️ 使用 Obsidian 写作&lt;/h2&gt;
-&lt;h3 id="设置-obsidian-vault"&gt;设置 Obsidian Vault&lt;/h3&gt;
-&lt;p&gt;方法 1：直接使用此目录作为 Vault&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Feel free to reach out to me through GitHub or other social platforms.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/readme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/readme/</guid><description>&lt;h1 id="obsidian-notes---hugo-博客内容仓库"&gt;Obsidian Notes - Hugo 博客内容仓库&lt;/h1&gt;
+&lt;p&gt;这是 &lt;a href="https://github.com/JiashuaiXu/hugo-server"&gt;hugo-server&lt;/a&gt; 博客的内容仓库，通过 Git submodule 与主仓库关联，用于存储和管理所有博客文章。&lt;/p&gt;
+&lt;h2 id="-仓库说明"&gt;📝 仓库说明&lt;/h2&gt;
+&lt;p&gt;本仓库作为 Obsidian vault 使用，同时也是 Hugo 博客的 &lt;code&gt;content&lt;/code&gt; 目录。所有的文章、页面和静态资源都存储在这里。&lt;/p&gt;
+&lt;h2 id="-目录结构"&gt;🗂️ 目录结构&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;obsidian-notes/
+├── .github/
+│ └── workflows/
+│ └── trigger-hugo.yml # 自动触发 hugo-server 构建
+├── posts/ # 📝 博客文章
+│ ├── 2025/ # 按年份组织
+│ └── test-automated-deployment.md
+├── about/ # 📄 关于页面
+├── archive/ # 📦 归档内容
+├── images/ # 🖼️ 图片资源
+└── README.md # 本文档
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="-工作流程"&gt;🚀 工作流程&lt;/h2&gt;
+&lt;h3 id="自动部署机制"&gt;自动部署机制&lt;/h3&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;1. 在 Obsidian 中编辑文章
+↓
+2. Git 提交并推送到 obsidian-notes
+↓
+3. GitHub Actions 检测到 .md 文件变更
+↓
+4. 触发 hugo-server 仓库的构建 workflow
+↓
+5. hugo-server 拉取最新内容 → 构建 → 部署
+↓
+6. 文章出现在 https://JiashuaiXu.github.io
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="github-actions-配置"&gt;GitHub Actions 配置&lt;/h3&gt;
+&lt;p&gt;本仓库的 &lt;code&gt;.github/workflows/trigger-hugo.yml&lt;/code&gt; 会：&lt;/p&gt;</description></item></channel></rss>

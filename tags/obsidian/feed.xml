@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Obsidian on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/obsidian/</link><description>Recent content in Obsidian on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>zh-cn</language><lastBuildDate>Tue, 11 Nov 2025 17:50:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/obsidian/feed.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</link><pubDate>Tue, 11 Nov 2025 17:50:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</guid><description>&lt;h1 id="hugo-博客自动化工作流完整指南"&gt;Hugo 博客自动化工作流完整指南&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Obsidian on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/obsidian/</link><description>Recent content in Obsidian on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>zh-cn</language><lastBuildDate>Tue, 11 Nov 2025 17:50:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/obsidian/feed.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 博客自动化工作流完整指南</title><link>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</link><pubDate>Tue, 11 Nov 2025 17:50:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</guid><description>&lt;h1 id="hugo-博客自动化工作流完整指南"&gt;Hugo 博客自动化工作流完整指南&lt;/h1&gt;
 &lt;p&gt;这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id="-目录"&gt;📋 目录&lt;/h2&gt;
@@ -93,7 +93,7 @@ JiashuaiXu.github.io (部署仓库)
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
 &lt;h2 id="-配置步骤"&gt;⚙️ 配置步骤&lt;/h2&gt;
 &lt;h3 id="1-创建-obsidian-notes-仓库"&gt;1. 创建 obsidian-notes 仓库&lt;/h3&gt;
-&lt;p&gt;在 GitHub 创建空仓库：&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link><pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid><description>&lt;h1 id="博客自动化部署配置全记录"&gt;博客自动化部署配置全记录&lt;/h1&gt;
+&lt;p&gt;在 GitHub 创建空仓库：&lt;/p&gt;</description></item><item><title>博客自动化部署配置全记录</title><link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link><pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid><description>&lt;h1 id="博客自动化部署配置全记录"&gt;博客自动化部署配置全记录&lt;/h1&gt;
 &lt;p&gt;记录从零开始搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程。&lt;/p&gt;
 &lt;h2 id="-目标"&gt;🎯 目标&lt;/h2&gt;
 &lt;p&gt;实现一个完全自动化的博客发布流程：&lt;/p&gt;
@@ -148,7 +148,7 @@ JiashuaiXu.github.io (部署仓库)
 &lt;/table&gt;
 &lt;h2 id="-实施步骤"&gt;📝 实施步骤&lt;/h2&gt;
 &lt;h3 id="1-子模块化内容管理"&gt;1. 子模块化内容管理&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/posts/obsidian-integration/</link><pubDate>Tue, 11 Nov 2025 17:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/obsidian-integration/</guid><description>&lt;h1 id="obsidian-与-hugo-完美集成"&gt;Obsidian 与 Hugo 完美集成&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description></item><item><title>Obsidian 与 Hugo 完美集成</title><link>https://JiashuaiXu.github.io/posts/obsidian-integration/</link><pubDate>Tue, 11 Nov 2025 17:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/obsidian-integration/</guid><description>&lt;h1 id="obsidian-与-hugo-完美集成"&gt;Obsidian 与 Hugo 完美集成&lt;/h1&gt;
 &lt;p&gt;使用 Obsidian 管理笔记内容，通过 Git 子模块连接到 Hugo 站点。&lt;/p&gt;
 &lt;h2 id="优势"&gt;优势&lt;/h2&gt;
 &lt;ul&gt;

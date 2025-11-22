@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Hugo 博客自动化工作流完整指南 | Jesse&#39;s Blog</title>
-<meta name="keywords" content="Hugo, GitHub Actions, Nix, Obsidian, 工作流, 文档">
-<meta name="description" content="Hugo 博客自动化工作流完整指南
-这是一份详尽的工作流文档，记录了从零搭建 Hugo &#43; Obsidian &#43; GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。
+<!doctype html><html lang=en dir=auto data-theme=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>Hugo 博客自动化工作流完整指南 | Jesse's Blog</title><meta name=keywords content="Hugo,GitHub Actions,Nix,Obsidian,工作流,文档"><meta name=description content='Hugo 博客自动化工作流完整指南
+这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。
 
 📋 目录
 
@@ -24,7 +15,7 @@
 
 🏗️ 系统架构
 设计理念
-目标： 实现&quot;写作 → 提交 → 自动发布&quot;的无缝工作流。
+目标： 实现"写作 → 提交 → 自动发布"的无缝工作流。
 核心原则：
 
 内容与配置分离
@@ -104,106 +95,11 @@ obsidian-notes/
 
 ⚙️ 配置步骤
 1. 创建 obsidian-notes 仓库
-在 GitHub 创建空仓库：">
-<meta name="author" content="Jesse">
-<link rel="canonical" href="https://JiashuaiXu.github.io/posts/complete-workflow-guide/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.525f8ecf34d0ad84664af4b0ac8db3cb592872940b3d27b589f1c1da6e9fbfcb.css" integrity="sha256-Ul&#43;OzzTQrYRmSvSwrI2zy1kocpQLPSe1ifHB2m6fv8s=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://JiashuaiXu.github.io/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://JiashuaiXu.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://JiashuaiXu.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://JiashuaiXu.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://JiashuaiXu.github.io/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://JiashuaiXu.github.io/posts/complete-workflow-guide/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-<style>
-  .reading-progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-    width: 0%;
-    z-index: 9999;
-    transition: width 0.2s ease;
-  }
-</style>
-
-
-<meta property="og:url" content="https://JiashuaiXu.github.io/posts/complete-workflow-guide/">
-  <meta property="og:site_name" content="Jesse&#39;s Blog">
-  <meta property="og:title" content="Hugo 博客自动化工作流完整指南">
-  <meta property="og:description" content="Hugo 博客自动化工作流完整指南 这是一份详尽的工作流文档，记录了从零搭建 Hugo &#43; Obsidian &#43; GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。
-📋 目录 系统架构 仓库结构 配置步骤 工作流详解 日常使用 故障排除 注意事项 进阶优化 🏗️ 系统架构 设计理念 目标： 实现&#34;写作 → 提交 → 自动发布&#34;的无缝工作流。
+在 GitHub 创建空仓库：'><meta name=author content="Jesse"><link rel=canonical href=https://JiashuaiXu.github.io/posts/complete-workflow-guide/><link crossorigin=anonymous href=/assets/css/stylesheet.525f8ecf34d0ad84664af4b0ac8db3cb592872940b3d27b589f1c1da6e9fbfcb.css integrity="sha256-Ul+OzzTQrYRmSvSwrI2zy1kocpQLPSe1ifHB2m6fv8s=" rel="preload stylesheet" as=style><link rel=icon href=https://JiashuaiXu.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://JiashuaiXu.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://JiashuaiXu.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://JiashuaiXu.github.io/apple-touch-icon.png><link rel=mask-icon href=https://JiashuaiXu.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://JiashuaiXu.github.io/posts/complete-workflow-guide/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51);color-scheme:dark}.list{background:var(--theme)}.toc{background:var(--entry)}}@media(prefers-color-scheme:light){.list::-webkit-scrollbar-thumb{border-color:var(--code-bg)}}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"?document.querySelector("html").dataset.theme="dark":localStorage.getItem("pref-theme")==="light"?document.querySelector("html").dataset.theme="light":window.matchMedia("(prefers-color-scheme: dark)").matches?document.querySelector("html").dataset.theme="dark":document.querySelector("html").dataset.theme="light"</script><style>.reading-progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,#667eea 0%,#764ba2 100%);width:0%;z-index:9999;transition:width .2s ease}</style><meta property="og:url" content="https://JiashuaiXu.github.io/posts/complete-workflow-guide/"><meta property="og:site_name" content="Jesse's Blog"><meta property="og:title" content="Hugo 博客自动化工作流完整指南"><meta property="og:description" content='Hugo 博客自动化工作流完整指南 这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。
+📋 目录 系统架构 仓库结构 配置步骤 工作流详解 日常使用 故障排除 注意事项 进阶优化 🏗️ 系统架构 设计理念 目标： 实现"写作 → 提交 → 自动发布"的无缝工作流。
 核心原则：
-内容与配置分离 环境可复现 自动化部署 本地与 CI 一致 三仓库架构 hugo-server (主仓库) ├── jesse-blog/ │ ├── content/ → obsidian-notes (子模块) │ ├── public/ → JiashuaiXu.github.io (子模块) │ ├── themes/ │ └── hugo.toml └── flake.nix obsidian-notes (内容仓库) ├── posts/ ├── about/ ├── archive/ └── .github/workflows/deploy.yml JiashuaiXu.github.io (部署仓库) └── (Hugo 生成的静态文件) 职责划分 仓库 用途 操作频率 是否需要手动操作 hugo-server Hugo 配置、主题、Nix 环境 偶尔更新配置 是 obsidian-notes 编写内容（日常工作） 频繁提交 是 JiashuaiXu.github.io 托管静态网站 自动更新 否 📁 仓库结构 hugo-server (主仓库) hugo-server/ ├── .gitmodules # ⚠️ 关键：子模块配置 ├── flake.nix # Nix 环境定义 ├── deploy.sh # 本地部署脚本 └── jesse-blog/ ├── content/ # → obsidian-notes (子模块) ├── public/ # → JiashuaiXu.github.io (子模块) ├── themes/ │ └── hugo-PaperMod/ # 当前使用的主题 └── hugo.toml # Hugo 配置文件 obsidian-notes (内容仓库) obsidian-notes/ ├── .github/workflows/ │ └── deploy.yml # ⚠️ 自动部署工作流 ├── README.md ├── posts/ # 博客文章目录 ├── about/ └── archive/ ⚙️ 配置步骤 1. 创建 obsidian-notes 仓库 在 GitHub 创建空仓库：">
-  <meta property="og:locale" content="zh-cn">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-11-11T17:50:00+08:00">
-    <meta property="article:modified_time" content="2025-11-11T17:50:00+08:00">
-    <meta property="article:tag" content="Hugo">
-    <meta property="article:tag" content="GitHub Actions">
-    <meta property="article:tag" content="Nix">
-    <meta property="article:tag" content="Obsidian">
-    <meta property="article:tag" content="工作流">
-    <meta property="article:tag" content="文档">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hugo 博客自动化工作流完整指南">
-<meta name="twitter:description" content="Hugo 博客自动化工作流完整指南
-这是一份详尽的工作流文档，记录了从零搭建 Hugo &#43; Obsidian &#43; GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。
+内容与配置分离 环境可复现 自动化部署 本地与 CI 一致 三仓库架构 hugo-server (主仓库) ├── jesse-blog/ │ ├── content/ → obsidian-notes (子模块) │ ├── public/ → JiashuaiXu.github.io (子模块) │ ├── themes/ │ └── hugo.toml └── flake.nix obsidian-notes (内容仓库) ├── posts/ ├── about/ ├── archive/ └── .github/workflows/deploy.yml JiashuaiXu.github.io (部署仓库) └── (Hugo 生成的静态文件) 职责划分 仓库 用途 操作频率 是否需要手动操作 hugo-server Hugo 配置、主题、Nix 环境 偶尔更新配置 是 obsidian-notes 编写内容（日常工作） 频繁提交 是 JiashuaiXu.github.io 托管静态网站 自动更新 否 📁 仓库结构 hugo-server (主仓库) hugo-server/ ├── .gitmodules # ⚠️ 关键：子模块配置 ├── flake.nix # Nix 环境定义 ├── deploy.sh # 本地部署脚本 └── jesse-blog/ ├── content/ # → obsidian-notes (子模块) ├── public/ # → JiashuaiXu.github.io (子模块) ├── themes/ │ └── hugo-PaperMod/ # 当前使用的主题 └── hugo.toml # Hugo 配置文件 obsidian-notes (内容仓库) obsidian-notes/ ├── .github/workflows/ │ └── deploy.yml # ⚠️ 自动部署工作流 ├── README.md ├── posts/ # 博客文章目录 ├── about/ └── archive/ ⚙️ 配置步骤 1. 创建 obsidian-notes 仓库 在 GitHub 创建空仓库：'><meta property="og:locale" content="zh-cn"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2025-11-11T17:50:00+08:00"><meta property="article:modified_time" content="2025-11-11T17:50:00+08:00"><meta property="article:tag" content="Hugo"><meta property="article:tag" content="GitHub Actions"><meta property="article:tag" content="Nix"><meta property="article:tag" content="Obsidian"><meta property="article:tag" content="工作流"><meta property="article:tag" content="文档"><meta name=twitter:card content="summary"><meta name=twitter:title content="Hugo 博客自动化工作流完整指南"><meta name=twitter:description content='Hugo 博客自动化工作流完整指南
+这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。
 
 📋 目录
 
@@ -219,7 +115,7 @@ obsidian-notes/
 
 🏗️ 系统架构
 设计理念
-目标： 实现&quot;写作 → 提交 → 自动发布&quot;的无缝工作流。
+目标： 实现"写作 → 提交 → 自动发布"的无缝工作流。
 核心原则：
 
 内容与配置分离
@@ -299,286 +195,10 @@ obsidian-notes/
 
 ⚙️ 配置步骤
 1. 创建 obsidian-notes 仓库
-在 GitHub 创建空仓库：">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://JiashuaiXu.github.io/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Hugo 博客自动化工作流完整指南",
-      "item": "https://JiashuaiXu.github.io/posts/complete-workflow-guide/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Hugo 博客自动化工作流完整指南",
-  "name": "Hugo 博客自动化工作流完整指南",
-  "description": "Hugo 博客自动化工作流完整指南 这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。\n📋 目录 系统架构 仓库结构 配置步骤 工作流详解 日常使用 故障排除 注意事项 进阶优化 🏗️ 系统架构 设计理念 目标： 实现\u0026quot;写作 → 提交 → 自动发布\u0026quot;的无缝工作流。\n核心原则：\n内容与配置分离 环境可复现 自动化部署 本地与 CI 一致 三仓库架构 hugo-server (主仓库) ├── jesse-blog/ │ ├── content/ → obsidian-notes (子模块) │ ├── public/ → JiashuaiXu.github.io (子模块) │ ├── themes/ │ └── hugo.toml └── flake.nix obsidian-notes (内容仓库) ├── posts/ ├── about/ ├── archive/ └── .github/workflows/deploy.yml JiashuaiXu.github.io (部署仓库) └── (Hugo 生成的静态文件) 职责划分 仓库 用途 操作频率 是否需要手动操作 hugo-server Hugo 配置、主题、Nix 环境 偶尔更新配置 是 obsidian-notes 编写内容（日常工作） 频繁提交 是 JiashuaiXu.github.io 托管静态网站 自动更新 否 📁 仓库结构 hugo-server (主仓库) hugo-server/ ├── .gitmodules # ⚠️ 关键：子模块配置 ├── flake.nix # Nix 环境定义 ├── deploy.sh # 本地部署脚本 └── jesse-blog/ ├── content/ # → obsidian-notes (子模块) ├── public/ # → JiashuaiXu.github.io (子模块) ├── themes/ │ └── hugo-PaperMod/ # 当前使用的主题 └── hugo.toml # Hugo 配置文件 obsidian-notes (内容仓库) obsidian-notes/ ├── .github/workflows/ │ └── deploy.yml # ⚠️ 自动部署工作流 ├── README.md ├── posts/ # 博客文章目录 ├── about/ └── archive/ ⚙️ 配置步骤 1. 创建 obsidian-notes 仓库 在 GitHub 创建空仓库：\n",
-  "keywords": [
-    "Hugo", "GitHub Actions", "Nix", "Obsidian", "工作流", "文档"
-  ],
-  "articleBody": "Hugo 博客自动化工作流完整指南 这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。\n📋 目录 系统架构 仓库结构 配置步骤 工作流详解 日常使用 故障排除 注意事项 进阶优化 🏗️ 系统架构 设计理念 目标： 实现\"写作 → 提交 → 自动发布\"的无缝工作流。\n核心原则：\n内容与配置分离 环境可复现 自动化部署 本地与 CI 一致 三仓库架构 hugo-server (主仓库) ├── jesse-blog/ │ ├── content/ → obsidian-notes (子模块) │ ├── public/ → JiashuaiXu.github.io (子模块) │ ├── themes/ │ └── hugo.toml └── flake.nix obsidian-notes (内容仓库) ├── posts/ ├── about/ ├── archive/ └── .github/workflows/deploy.yml JiashuaiXu.github.io (部署仓库) └── (Hugo 生成的静态文件) 职责划分 仓库 用途 操作频率 是否需要手动操作 hugo-server Hugo 配置、主题、Nix 环境 偶尔更新配置 是 obsidian-notes 编写内容（日常工作） 频繁提交 是 JiashuaiXu.github.io 托管静态网站 自动更新 否 📁 仓库结构 hugo-server (主仓库) hugo-server/ ├── .gitmodules # ⚠️ 关键：子模块配置 ├── flake.nix # Nix 环境定义 ├── deploy.sh # 本地部署脚本 └── jesse-blog/ ├── content/ # → obsidian-notes (子模块) ├── public/ # → JiashuaiXu.github.io (子模块) ├── themes/ │ └── hugo-PaperMod/ # 当前使用的主题 └── hugo.toml # Hugo 配置文件 obsidian-notes (内容仓库) obsidian-notes/ ├── .github/workflows/ │ └── deploy.yml # ⚠️ 自动部署工作流 ├── README.md ├── posts/ # 博客文章目录 ├── about/ └── archive/ ⚙️ 配置步骤 1. 创建 obsidian-notes 仓库 在 GitHub 创建空仓库：\n仓库名: obsidian-notes 可见性: Public 2. 备份现有内容 cd /path/to/hugo-server cp -r jesse-blog/content ~/hugo-content-backup ⚠️ 重要： 始终先备份，避免数据丢失！\n3. 从主仓库移除 content 目录 cd /path/to/hugo-server git rm -rf jesse-blog/content git commit -m \"Remove content directory to prepare for submodule\" git push origin main 4. 添加 obsidian-notes 作为子模块 cd /path/to/hugo-server git submodule add https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content # ⚠️ 确保 .gitmodules 中有正确的配置 cat .gitmodules | grep -A 2 \"jesse-blog/content\" ⚠️ 关键点： .gitmodules 必须包含子模块配置，否则 GitHub Actions 会失败！\n5. 迁移内容到 obsidian-notes cd jesse-blog/content git checkout -b main cp -r ~/hugo-content-backup/* . git add . git commit -m \"Initial commit: Import existing content\" git push -u origin main 6. 配置 GitHub Token 创建 Personal Access Token：\n访问: https://github.com/settings/tokens Generate new token (classic) 权限: repo + workflow 复制 token 添加 Secret：\n访问: https://github.com/JiashuaiXu/obsidian-notes/settings/secrets/actions New repository secret Name: GH_PAT Value: 粘贴 token 🔄 工作流详解 GitHub Actions 工作流文件 位置: obsidian-notes/.github/workflows/deploy.yml\nname: Deploy Hugo Site on: push: branches: [main] workflow_dispatch: jobs: deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 with: repository: JiashuaiXu/hugo-server token: ${{ secrets.GH_PAT }} submodules: recursive - uses: DeterminateSystems/nix-installer-action@main - uses: DeterminateSystems/magic-nix-cache-action@main - name: Build Hugo site run: | cd jesse-blog nix develop --command bash -c \"hugo -D\" - name: Deploy to GitHub Pages run: | cd jesse-blog/public git config user.name \"GitHub Actions\" git config user.email \"actions@github.com\" git add . if ! git diff --staged --quiet; then git commit -m \"Deploy: $(date +'%Y-%m-%d %H:%M:%S')\" git push origin main fi 执行流程 触发: 推送到 obsidian-notes Checkout: 检出 hugo-server + 所有子模块 安装 Nix: 约 30 秒 设置缓存: 首次 3 分钟，后续 10 秒 编译: Hugo 生成静态文件 (20-30 秒) 部署: 推送到 GitHub Pages (5-10 秒) 总时间: 首次 ~5 分钟，后续 ~1.5 分钟\n📝 日常使用 使用 Obsidian 写作 设置 Vault:\n# 方式 1: 直接使用 obsidian-notes # 在 Obsidian 中打开 /path/to/hugo-server/jesse-blog/content # 方式 2: 创建符号链接 ln -s /path/to/hugo-server/jesse-blog/content ~/obsidian-vault/blog 创建文章:\n文章需要包含 frontmatter：\n--- title: \"文章标题\" date: 2025-11-11T17:50:00+08:00 draft: false tags: [\"标签1\", \"标签2\"] categories: [\"分类\"] --- # 正文 内容... 发布流程:\ncd /path/to/obsidian-notes git add posts/my-article.md git commit -m \"Add: 新文章\" git push origin main # 等待 1-3 分钟，访问 https://JiashuaiXu.github.io/ 本地预览 cd /path/to/hugo-server nix develop cd jesse-blog hugo server -D # 访问 http://localhost:1313 🐛 故障排除 问题 1: 子模块 URL 未找到 错误:\nNo url found for submodule path 'jesse-blog/content' in .gitmodules 解决:\ncd /path/to/hugo-server git submodule add -f https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content git add .gitmodules jesse-blog/content git commit -m \"Fix: Add content submodule to .gitmodules\" git push origin main 问题 2: public 子模块引用过时 错误:\nremote error: upload-pack: not our ref 4a838c8... 解决:\ncd /path/to/hugo-server git fetch origin git reset --hard origin/main cd jesse-blog/public git checkout main git pull origin main cd ../.. git add jesse-blog/public git commit -m \"Update public submodule\" git push origin main 问题 3: GitHub Actions 权限不足 错误:\nremote: Permission denied to github-actions[bot] 解决:\n检查 GH_PAT token 权限 确保包含 repo + workflow 重新生成并更新 Secret 问题 4: 网站没有更新 检查清单:\nGitHub Actions 是否成功运行？ 文章 frontmatter 中 draft: false？ 文章日期不在未来？ 等待 2-5 分钟（GitHub Pages 缓存） 强制刷新浏览器 (Ctrl + Shift + R) ⚠️ 注意事项 关键文件 文件 位置 重要性 .gitmodules hugo-server/ ⭐⭐⭐⭐⭐ deploy.yml obsidian-notes/.github/workflows/ ⭐⭐⭐⭐⭐ GH_PAT GitHub Secret ⭐⭐⭐⭐⭐ flake.nix hugo-server/ ⭐⭐⭐⭐ hugo.toml hugo-server/jesse-blog/ ⭐⭐⭐⭐ 不要做的事 ❌ 不要直接在 JiashuaiXu.github.io 编辑文件 - 会被覆盖\n❌ 不要在主仓库的 content/ 提交内容 - 必须在 obsidian-notes 提交\n❌ 不要忘记添加 frontmatter - Hugo 不会识别\n❌ 不要泄露 GH_PAT - 等同于密码\n最佳实践 ✅ 定期备份内容\n✅ 使用有意义的 commit 消息\n✅ 文章命名使用 kebab-case\n✅ 检查 Actions 运行状态\n✅ 本地测试后再推送\n🚀 进阶优化 1. 添加评论系统 (Giscus) 使用 GitHub Discussions 作为评论：\n[params.giscus] repo = \"JiashuaiXu/JiashuaiXu.github.io\" repoId = \"YOUR_REPO_ID\" category = \"General\" categoryId = \"YOUR_CATEGORY_ID\" 2. RSS Feed 已自动启用：\n全站: https://JiashuaiXu.github.io/feed.xml 分类: https://JiashuaiXu.github.io/categories/技术/feed.xml 3. 优化工作流速度 使用 peaceiris/actions-hugo 替代 Nix（更快）：\n- name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: '0.152.2' extended: true 对比:\nNix: 1.5-5 分钟（首次慢，后续快） actions-hugo: 30 秒（始终快速） 权衡: Nix 保证环境一致性，actions-hugo 更快但可能有版本差异。\n✅ 检查清单 配置完成前确认：\n创建 obsidian-notes 仓库 配置 .gitmodules 包含 content 子模块 创建 .github/workflows/deploy.yml 生成 GitHub PAT 添加 GH_PAT Secret 测试工作流 验证网站更新 配置 Obsidian Vault 设置本地 Nix 环境 🎉 总结 现在你拥有了完全自动化的博客系统：\n✅ 内容管理: Obsidian 或任何 Markdown 编辑器\n✅ 版本控制: Git 跟踪所有更改\n✅ 自动部署: 推送即发布\n✅ 环境一致: Nix 保证本地和 CI 相同\n✅ 分离关注点: 内容、配置、部署独立\n工作流: 写作 → 提交 → 自动发布 → 完成！🚀\n📚 参考资源 Hugo 官方文档 GitHub Actions 文档 Nix Flakes 入门 PaperMod 主题 Obsidian 最后更新: 2025-11-11\n文档版本: 1.0\n",
-  "wordCount" : "844",
-  "inLanguage": "en",
-  "datePublished": "2025-11-11T17:50:00+08:00",
-  "dateModified": "2025-11-11T17:50:00+08:00",
-  "author":{
-    "@type": "Person",
-    "name": "Jesse"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://JiashuaiXu.github.io/posts/complete-workflow-guide/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Jesse's Blog",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://JiashuaiXu.github.io/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://JiashuaiXu.github.io/" accesskey="h" title="Jesse&#39;s Blog (Alt + H)">Jesse&#39;s Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://JiashuaiXu.github.io/" title="Home">
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://JiashuaiXu.github.io/archive/" title="Archive">
-                    <span>Archive</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://JiashuaiXu.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
-                    <span>Search</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://JiashuaiXu.github.io/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://JiashuaiXu.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://JiashuaiXu.github.io/posts/">Posts</a></div>
-    <h1 class="post-title entry-hint-parent">
-      Hugo 博客自动化工作流完整指南
-    </h1>
-    <div class="post-meta"><span title='2025-11-11 17:50:00 +0800 +0800'>📅 2025-11-11</span>&nbsp;·&nbsp;<span>⏱️ 4 min read</span>&nbsp;·&nbsp;<span>📝 844 words</span>&nbsp;·&nbsp;<span>✍️ Jesse</span><span id="busuanzi_container_page_pv" class="post-views">
-  &nbsp;·&nbsp;👁️ <span id="busuanzi_value_page_pv"></span> views
-</span></div>
-  </header> <aside id="toc-container" class="toc-container wide">
-  <div class="toc">
-    <details  open>
-      <summary accesskey="c" title="(Alt + C)">
-        <span class="details">Table of Contents</span>
-      </summary>
-      <div class="inner"><ul></li><li>
-              <a href="#hugo%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97" aria-label="Hugo 博客自动化工作流完整指南">Hugo 博客自动化工作流完整指南</a><ul></li><li>
-              <a href="#%e7%9b%ae%e5%bd%95" aria-label="📋 目录">📋 目录</a></li><li>
-              <a href="#%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84" aria-label="🏗️ 系统架构">🏗️ 系统架构</a><ul></li><li>
-              <a href="#%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5" aria-label="设计理念">设计理念</a></li><li>
-              <a href="#%e4%b8%89%e4%bb%93%e5%ba%93%e6%9e%b6%e6%9e%84" aria-label="三仓库架构">三仓库架构</a></li><li>
-              <a href="#%e8%81%8c%e8%b4%a3%e5%88%92%e5%88%86" aria-label="职责划分">职责划分</a></ul></li><li>
-              <a href="#%e4%bb%93%e5%ba%93%e7%bb%93%e6%9e%84" aria-label="📁 仓库结构">📁 仓库结构</a><ul></li><li>
-              <a href="#hugoserver%e4%b8%bb%e4%bb%93%e5%ba%93" aria-label="hugo-server (主仓库)">hugo-server (主仓库)</a></li><li>
-              <a href="#obsidiannotes%e5%86%85%e5%ae%b9%e4%bb%93%e5%ba%93" aria-label="obsidian-notes (内容仓库)">obsidian-notes (内容仓库)</a></ul></li><li>
-              <a href="#%e9%85%8d%e7%bd%ae%e6%ad%a5%e9%aa%a4" aria-label="⚙️ 配置步骤">⚙️ 配置步骤</a><ul></li><li>
-              <a href="#1%e5%88%9b%e5%bb%baobsidiannotes%e4%bb%93%e5%ba%93" aria-label="1. 创建 obsidian-notes 仓库">1. 创建 obsidian-notes 仓库</a></li><li>
-              <a href="#2%e5%a4%87%e4%bb%bd%e7%8e%b0%e6%9c%89%e5%86%85%e5%ae%b9" aria-label="2. 备份现有内容">2. 备份现有内容</a></li><li>
-              <a href="#3%e4%bb%8e%e4%b8%bb%e4%bb%93%e5%ba%93%e7%a7%bb%e9%99%a4content%e7%9b%ae%e5%bd%95" aria-label="3. 从主仓库移除 content 目录">3. 从主仓库移除 content 目录</a></li><li>
-              <a href="#4%e6%b7%bb%e5%8a%a0obsidiannotes%e4%bd%9c%e4%b8%ba%e5%ad%90%e6%a8%a1%e5%9d%97" aria-label="4. 添加 obsidian-notes 作为子模块">4. 添加 obsidian-notes 作为子模块</a></li><li>
-              <a href="#5%e8%bf%81%e7%a7%bb%e5%86%85%e5%ae%b9%e5%88%b0obsidiannotes" aria-label="5. 迁移内容到 obsidian-notes">5. 迁移内容到 obsidian-notes</a></li><li>
-              <a href="#6%e9%85%8d%e7%bd%aegithubtoken" aria-label="6. 配置 GitHub Token">6. 配置 GitHub Token</a></ul></li><li>
-              <a href="#%e5%b7%a5%e4%bd%9c%e6%b5%81%e8%af%a6%e8%a7%a3" aria-label="🔄 工作流详解">🔄 工作流详解</a><ul></li><li>
-              <a href="#githubactions%e5%b7%a5%e4%bd%9c%e6%b5%81%e6%96%87%e4%bb%b6" aria-label="GitHub Actions 工作流文件">GitHub Actions 工作流文件</a></li><li>
-              <a href="#%e6%89%a7%e8%a1%8c%e6%b5%81%e7%a8%8b" aria-label="执行流程">执行流程</a></ul></li><li>
-              <a href="#%e6%97%a5%e5%b8%b8%e4%bd%bf%e7%94%a8" aria-label="📝 日常使用">📝 日常使用</a><ul></li><li>
-              <a href="#%e4%bd%bf%e7%94%a8obsidian%e5%86%99%e4%bd%9c" aria-label="使用 Obsidian 写作">使用 Obsidian 写作</a></li><li>
-              <a href="#%e6%9c%ac%e5%9c%b0%e9%a2%84%e8%a7%88" aria-label="本地预览">本地预览</a></ul></li><li>
-              <a href="#%e6%95%85%e9%9a%9c%e6%8e%92%e9%99%a4" aria-label="🐛 故障排除">🐛 故障排除</a><ul></li><li>
-              <a href="#%e9%97%ae%e9%a2%981%e5%ad%90%e6%a8%a1%e5%9d%97url%e6%9c%aa%e6%89%be%e5%88%b0" aria-label="问题 1: 子模块 URL 未找到">问题 1: 子模块 URL 未找到</a></li><li>
-              <a href="#%e9%97%ae%e9%a2%982public%e5%ad%90%e6%a8%a1%e5%9d%97%e5%bc%95%e7%94%a8%e8%bf%87%e6%97%b6" aria-label="问题 2: public 子模块引用过时">问题 2: public 子模块引用过时</a></li><li>
-              <a href="#%e9%97%ae%e9%a2%983githubactions%e6%9d%83%e9%99%90%e4%b8%8d%e8%b6%b3" aria-label="问题 3: GitHub Actions 权限不足">问题 3: GitHub Actions 权限不足</a></li><li>
-              <a href="#%e9%97%ae%e9%a2%984%e7%bd%91%e7%ab%99%e6%b2%a1%e6%9c%89%e6%9b%b4%e6%96%b0" aria-label="问题 4: 网站没有更新">问题 4: 网站没有更新</a></ul></li><li>
-              <a href="#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9" aria-label="⚠️ 注意事项">⚠️ 注意事项</a><ul></li><li>
-              <a href="#%e5%85%b3%e9%94%ae%e6%96%87%e4%bb%b6" aria-label="关键文件">关键文件</a></li><li>
-              <a href="#%e4%b8%8d%e8%a6%81%e5%81%9a%e7%9a%84%e4%ba%8b" aria-label="不要做的事">不要做的事</a></li><li>
-              <a href="#%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" aria-label="最佳实践">最佳实践</a></ul></li><li>
-              <a href="#%e8%bf%9b%e9%98%b6%e4%bc%98%e5%8c%96" aria-label="🚀 进阶优化">🚀 进阶优化</a><ul></li><li>
-              <a href="#1%e6%b7%bb%e5%8a%a0%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9fgiscus" aria-label="1. 添加评论系统 (Giscus)">1. 添加评论系统 (Giscus)</a></li><li>
-              <a href="#2rssfeed" aria-label="2. RSS Feed">2. RSS Feed</a></li><li>
-              <a href="#3%e4%bc%98%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e9%80%9f%e5%ba%a6" aria-label="3. 优化工作流速度">3. 优化工作流速度</a></ul></li><li>
-              <a href="#%e6%a3%80%e6%9f%a5%e6%b8%85%e5%8d%95" aria-label="✅ 检查清单">✅ 检查清单</a></li><li>
-              <a href="#%e6%80%bb%e7%bb%93" aria-label="🎉 总结">🎉 总结</a></li><li>
-              <a href="#%e5%8f%82%e8%80%83%e8%b5%84%e6%ba%90" aria-label="📚 参考资源">📚 参考资源</a></ul>
-      </div>
-    </details>
-  </div>
-</aside>
-<script>
-  let activeElement;
-  let elements;
-  window.addEventListener('DOMContentLoaded', function (event) {
-    checkTocPosition();
-    elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
-    
-    if (elements.length > 0) {
-      activeElement = elements[0];
-      const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
-      const tocLink = document.querySelector(`.inner ul li a[href="#${id}"]`);
-      if (tocLink) {
-        tocLink.classList.add('active');
-      }
-    }
-  }, false);
-
-  window.addEventListener('resize', function(event) {
-    checkTocPosition();
-  }, false);
-
-  window.addEventListener('scroll', () => {
-    if (!elements || elements.length === 0) return;
-    
-    activeElement = Array.from(elements).find((element) => {
-      if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
-          (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
-        return element;
-      }
-    }) || activeElement
-
-    elements.forEach((element) => {
-      const id = encodeURI(element.getAttribute('id')).toLowerCase();
-      const tocLink = document.querySelector(`.inner ul li a[href="#${id}"]`);
-      if (tocLink) {
-        if (element === activeElement) {
-          tocLink.classList.add('active');
-          
-          const tocContainer = document.querySelector('.toc .inner');
-          if (tocContainer) {
-            const linkOffsetTop = tocLink.offsetTop;
-            const containerHeight = tocContainer.clientHeight;
-            const linkHeight = tocLink.clientHeight;
-            
-            const scrollPosition = linkOffsetTop - (containerHeight / 2) + (linkHeight / 2);
-            tocContainer.scrollTo({
-              top: scrollPosition,
-              behavior: 'smooth'
-            });
-          }
-        } else {
-          tocLink.classList.remove('active');
-        }
-      }
-    });
-  }, false);
-
-  const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
-  const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
-  const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
-
-  function checkTocPosition() {
-    const width = document.body.scrollWidth;
-    const tocContainer = document.getElementById("toc-container");
-    if (!tocContainer) return;
-    
-    
-    if (width >= 1000) {
-      tocContainer.classList.add("wide");
-    } else {
-      tocContainer.classList.remove("wide");
-    }
-  }
-
-  function getOffsetTop(element) {
-    if (!element.getClientRects().length) {
-      return 0;
-    }
-    let rect = element.getBoundingClientRect();
-    let win = element.ownerDocument.defaultView;
-    return rect.top + win.pageYOffset;
-  }
-</script>
-
-  <div class="post-content"><h1 id="hugo-博客自动化工作流完整指南">Hugo 博客自动化工作流完整指南<a hidden class="anchor" aria-hidden="true" href="#hugo-博客自动化工作流完整指南">#</a></h1>
-<p>这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。</p>
-<hr>
-<h2 id="-目录">📋 目录<a hidden class="anchor" aria-hidden="true" href="#-目录">#</a></h2>
-<ol>
-<li><a href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84">系统架构</a></li>
-<li><a href="#%E4%BB%93%E5%BA%93%E7%BB%93%E6%9E%84">仓库结构</a></li>
-<li><a href="#%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4">配置步骤</a></li>
-<li><a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AF%A6%E8%A7%A3">工作流详解</a></li>
-<li><a href="#%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8">日常使用</a></li>
-<li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4">故障排除</a></li>
-<li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></li>
-<li><a href="#%E8%BF%9B%E9%98%B6%E4%BC%98%E5%8C%96">进阶优化</a></li>
-</ol>
-<hr>
-<h2 id="-系统架构">🏗️ 系统架构<a hidden class="anchor" aria-hidden="true" href="#-系统架构">#</a></h2>
-<h3 id="设计理念">设计理念<a hidden class="anchor" aria-hidden="true" href="#设计理念">#</a></h3>
-<p><strong>目标：</strong> 实现&quot;写作 → 提交 → 自动发布&quot;的无缝工作流。</p>
-<p><strong>核心原则：</strong></p>
-<ul>
-<li>内容与配置分离</li>
-<li>环境可复现</li>
-<li>自动化部署</li>
-<li>本地与 CI 一致</li>
-</ul>
-<h3 id="三仓库架构">三仓库架构<a hidden class="anchor" aria-hidden="true" href="#三仓库架构">#</a></h3>
-<pre tabindex="0"><code>hugo-server (主仓库)
+在 GitHub 创建空仓库：'><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://JiashuaiXu.github.io/posts/"},{"@type":"ListItem","position":2,"name":"Hugo 博客自动化工作流完整指南","item":"https://JiashuaiXu.github.io/posts/complete-workflow-guide/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Hugo 博客自动化工作流完整指南","name":"Hugo 博客自动化工作流完整指南","description":"Hugo 博客自动化工作流完整指南 这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。\n📋 目录 系统架构 仓库结构 配置步骤 工作流详解 日常使用 故障排除 注意事项 进阶优化 🏗️ 系统架构 设计理念 目标： 实现\u0026quot;写作 → 提交 → 自动发布\u0026quot;的无缝工作流。\n核心原则：\n内容与配置分离 环境可复现 自动化部署 本地与 CI 一致 三仓库架构 hugo-server (主仓库) ├── jesse-blog/ │ ├── content/ → obsidian-notes (子模块) │ ├── public/ → JiashuaiXu.github.io (子模块) │ ├── themes/ │ └── hugo.toml └── flake.nix obsidian-notes (内容仓库) ├── posts/ ├── about/ ├── archive/ └── .github/workflows/deploy.yml JiashuaiXu.github.io (部署仓库) └── (Hugo 生成的静态文件) 职责划分 仓库 用途 操作频率 是否需要手动操作 hugo-server Hugo 配置、主题、Nix 环境 偶尔更新配置 是 obsidian-notes 编写内容（日常工作） 频繁提交 是 JiashuaiXu.github.io 托管静态网站 自动更新 否 📁 仓库结构 hugo-server (主仓库) hugo-server/ ├── .gitmodules # ⚠️ 关键：子模块配置 ├── flake.nix # Nix 环境定义 ├── deploy.sh # 本地部署脚本 └── jesse-blog/ ├── content/ # → obsidian-notes (子模块) ├── public/ # → JiashuaiXu.github.io (子模块) ├── themes/ │ └── hugo-PaperMod/ # 当前使用的主题 └── hugo.toml # Hugo 配置文件 obsidian-notes (内容仓库) obsidian-notes/ ├── .github/workflows/ │ └── deploy.yml # ⚠️ 自动部署工作流 ├── README.md ├── posts/ # 博客文章目录 ├── about/ └── archive/ ⚙️ 配置步骤 1. 创建 obsidian-notes 仓库 在 GitHub 创建空仓库：\n","keywords":["Hugo","GitHub Actions","Nix","Obsidian","工作流","文档"],"articleBody":"Hugo 博客自动化工作流完整指南 这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。\n📋 目录 系统架构 仓库结构 配置步骤 工作流详解 日常使用 故障排除 注意事项 进阶优化 🏗️ 系统架构 设计理念 目标： 实现\"写作 → 提交 → 自动发布\"的无缝工作流。\n核心原则：\n内容与配置分离 环境可复现 自动化部署 本地与 CI 一致 三仓库架构 hugo-server (主仓库) ├── jesse-blog/ │ ├── content/ → obsidian-notes (子模块) │ ├── public/ → JiashuaiXu.github.io (子模块) │ ├── themes/ │ └── hugo.toml └── flake.nix obsidian-notes (内容仓库) ├── posts/ ├── about/ ├── archive/ └── .github/workflows/deploy.yml JiashuaiXu.github.io (部署仓库) └── (Hugo 生成的静态文件) 职责划分 仓库 用途 操作频率 是否需要手动操作 hugo-server Hugo 配置、主题、Nix 环境 偶尔更新配置 是 obsidian-notes 编写内容（日常工作） 频繁提交 是 JiashuaiXu.github.io 托管静态网站 自动更新 否 📁 仓库结构 hugo-server (主仓库) hugo-server/ ├── .gitmodules # ⚠️ 关键：子模块配置 ├── flake.nix # Nix 环境定义 ├── deploy.sh # 本地部署脚本 └── jesse-blog/ ├── content/ # → obsidian-notes (子模块) ├── public/ # → JiashuaiXu.github.io (子模块) ├── themes/ │ └── hugo-PaperMod/ # 当前使用的主题 └── hugo.toml # Hugo 配置文件 obsidian-notes (内容仓库) obsidian-notes/ ├── .github/workflows/ │ └── deploy.yml # ⚠️ 自动部署工作流 ├── README.md ├── posts/ # 博客文章目录 ├── about/ └── archive/ ⚙️ 配置步骤 1. 创建 obsidian-notes 仓库 在 GitHub 创建空仓库：\n仓库名: obsidian-notes 可见性: Public 2. 备份现有内容 cd /path/to/hugo-server cp -r jesse-blog/content ~/hugo-content-backup ⚠️ 重要： 始终先备份，避免数据丢失！\n3. 从主仓库移除 content 目录 cd /path/to/hugo-server git rm -rf jesse-blog/content git commit -m \"Remove content directory to prepare for submodule\" git push origin main 4. 添加 obsidian-notes 作为子模块 cd /path/to/hugo-server git submodule add https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content # ⚠️ 确保 .gitmodules 中有正确的配置 cat .gitmodules | grep -A 2 \"jesse-blog/content\" ⚠️ 关键点： .gitmodules 必须包含子模块配置，否则 GitHub Actions 会失败！\n5. 迁移内容到 obsidian-notes cd jesse-blog/content git checkout -b main cp -r ~/hugo-content-backup/* . git add . git commit -m \"Initial commit: Import existing content\" git push -u origin main 6. 配置 GitHub Token 创建 Personal Access Token：\n访问: https://github.com/settings/tokens Generate new token (classic) 权限: repo + workflow 复制 token 添加 Secret：\n访问: https://github.com/JiashuaiXu/obsidian-notes/settings/secrets/actions New repository secret Name: GH_PAT Value: 粘贴 token 🔄 工作流详解 GitHub Actions 工作流文件 位置: obsidian-notes/.github/workflows/deploy.yml\nname: Deploy Hugo Site on: push: branches: [main] workflow_dispatch: jobs: deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 with: repository: JiashuaiXu/hugo-server token: ${{ secrets.GH_PAT }} submodules: recursive - uses: DeterminateSystems/nix-installer-action@main - uses: DeterminateSystems/magic-nix-cache-action@main - name: Build Hugo site run: | cd jesse-blog nix develop --command bash -c \"hugo -D\" - name: Deploy to GitHub Pages run: | cd jesse-blog/public git config user.name \"GitHub Actions\" git config user.email \"actions@github.com\" git add . if ! git diff --staged --quiet; then git commit -m \"Deploy: $(date +'%Y-%m-%d %H:%M:%S')\" git push origin main fi 执行流程 触发: 推送到 obsidian-notes Checkout: 检出 hugo-server + 所有子模块 安装 Nix: 约 30 秒 设置缓存: 首次 3 分钟，后续 10 秒 编译: Hugo 生成静态文件 (20-30 秒) 部署: 推送到 GitHub Pages (5-10 秒) 总时间: 首次 ~5 分钟，后续 ~1.5 分钟\n📝 日常使用 使用 Obsidian 写作 设置 Vault:\n# 方式 1: 直接使用 obsidian-notes # 在 Obsidian 中打开 /path/to/hugo-server/jesse-blog/content # 方式 2: 创建符号链接 ln -s /path/to/hugo-server/jesse-blog/content ~/obsidian-vault/blog 创建文章:\n文章需要包含 frontmatter：\n--- title: \"文章标题\" date: 2025-11-11T17:50:00+08:00 draft: false tags: [\"标签1\", \"标签2\"] categories: [\"分类\"] --- # 正文 内容... 发布流程:\ncd /path/to/obsidian-notes git add posts/my-article.md git commit -m \"Add: 新文章\" git push origin main # 等待 1-3 分钟，访问 https://JiashuaiXu.github.io/ 本地预览 cd /path/to/hugo-server nix develop cd jesse-blog hugo server -D # 访问 http://localhost:1313 🐛 故障排除 问题 1: 子模块 URL 未找到 错误:\nNo url found for submodule path 'jesse-blog/content' in .gitmodules 解决:\ncd /path/to/hugo-server git submodule add -f https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content git add .gitmodules jesse-blog/content git commit -m \"Fix: Add content submodule to .gitmodules\" git push origin main 问题 2: public 子模块引用过时 错误:\nremote error: upload-pack: not our ref 4a838c8... 解决:\ncd /path/to/hugo-server git fetch origin git reset --hard origin/main cd jesse-blog/public git checkout main git pull origin main cd ../.. git add jesse-blog/public git commit -m \"Update public submodule\" git push origin main 问题 3: GitHub Actions 权限不足 错误:\nremote: Permission denied to github-actions[bot] 解决:\n检查 GH_PAT token 权限 确保包含 repo + workflow 重新生成并更新 Secret 问题 4: 网站没有更新 检查清单:\nGitHub Actions 是否成功运行？ 文章 frontmatter 中 draft: false？ 文章日期不在未来？ 等待 2-5 分钟（GitHub Pages 缓存） 强制刷新浏览器 (Ctrl + Shift + R) ⚠️ 注意事项 关键文件 文件 位置 重要性 .gitmodules hugo-server/ ⭐⭐⭐⭐⭐ deploy.yml obsidian-notes/.github/workflows/ ⭐⭐⭐⭐⭐ GH_PAT GitHub Secret ⭐⭐⭐⭐⭐ flake.nix hugo-server/ ⭐⭐⭐⭐ hugo.toml hugo-server/jesse-blog/ ⭐⭐⭐⭐ 不要做的事 ❌ 不要直接在 JiashuaiXu.github.io 编辑文件 - 会被覆盖\n❌ 不要在主仓库的 content/ 提交内容 - 必须在 obsidian-notes 提交\n❌ 不要忘记添加 frontmatter - Hugo 不会识别\n❌ 不要泄露 GH_PAT - 等同于密码\n最佳实践 ✅ 定期备份内容\n✅ 使用有意义的 commit 消息\n✅ 文章命名使用 kebab-case\n✅ 检查 Actions 运行状态\n✅ 本地测试后再推送\n🚀 进阶优化 1. 添加评论系统 (Giscus) 使用 GitHub Discussions 作为评论：\n[params.giscus] repo = \"JiashuaiXu/JiashuaiXu.github.io\" repoId = \"YOUR_REPO_ID\" category = \"General\" categoryId = \"YOUR_CATEGORY_ID\" 2. RSS Feed 已自动启用：\n全站: https://JiashuaiXu.github.io/feed.xml 分类: https://JiashuaiXu.github.io/categories/技术/feed.xml 3. 优化工作流速度 使用 peaceiris/actions-hugo 替代 Nix（更快）：\n- name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: '0.152.2' extended: true 对比:\nNix: 1.5-5 分钟（首次慢，后续快） actions-hugo: 30 秒（始终快速） 权衡: Nix 保证环境一致性，actions-hugo 更快但可能有版本差异。\n✅ 检查清单 配置完成前确认：\n创建 obsidian-notes 仓库 配置 .gitmodules 包含 content 子模块 创建 .github/workflows/deploy.yml 生成 GitHub PAT 添加 GH_PAT Secret 测试工作流 验证网站更新 配置 Obsidian Vault 设置本地 Nix 环境 🎉 总结 现在你拥有了完全自动化的博客系统：\n✅ 内容管理: Obsidian 或任何 Markdown 编辑器\n✅ 版本控制: Git 跟踪所有更改\n✅ 自动部署: 推送即发布\n✅ 环境一致: Nix 保证本地和 CI 相同\n✅ 分离关注点: 内容、配置、部署独立\n工作流: 写作 → 提交 → 自动发布 → 完成！🚀\n📚 参考资源 Hugo 官方文档 GitHub Actions 文档 Nix Flakes 入门 PaperMod 主题 Obsidian 最后更新: 2025-11-11\n文档版本: 1.0\n","wordCount":"844","inLanguage":"en","datePublished":"2025-11-11T17:50:00+08:00","dateModified":"2025-11-11T17:50:00+08:00","author":{"@type":"Person","name":"Jesse"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://JiashuaiXu.github.io/posts/complete-workflow-guide/"},"publisher":{"@type":"Organization","name":"Jesse's Blog","logo":{"@type":"ImageObject","url":"https://JiashuaiXu.github.io/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://JiashuaiXu.github.io/ accesskey=h title="Jesse's Blog (Alt + H)">Jesse's Blog</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://JiashuaiXu.github.io/ title=Home><span>Home</span></a></li><li><a href=https://JiashuaiXu.github.io/archive/ title=Archive><span>Archive</span></a></li><li><a href=https://JiashuaiXu.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://JiashuaiXu.github.io/about/ title=About><span>About</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://JiashuaiXu.github.io/>Home</a>&nbsp;»&nbsp;<a href=https://JiashuaiXu.github.io/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">Hugo 博客自动化工作流完整指南</h1><div class=post-meta><span title='2025-11-11 17:50:00 +0800 +0800'>📅 2025-11-11</span>&nbsp;·&nbsp;<span>⏱️ 4 min read</span>&nbsp;·&nbsp;<span>📝 844 words</span>&nbsp;·&nbsp;<span>✍️ Jesse</span><span id=busuanzi_container_page_pv class=post-views>
+&nbsp;·&nbsp;👁️ <span id=busuanzi_value_page_pv></span> views</span></div></header><aside id=toc-container class="toc-container wide"><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul></li><li><a href=#hugo%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97 aria-label="Hugo 博客自动化工作流完整指南">Hugo 博客自动化工作流完整指南</a><ul></li><li><a href=#%e7%9b%ae%e5%bd%95 aria-label="📋 目录">📋 目录</a></li><li><a href=#%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84 aria-label="🏗️ 系统架构">🏗️ 系统架构</a><ul></li><li><a href=#%e8%ae%be%e8%ae%a1%e7%90%86%e5%bf%b5 aria-label=设计理念>设计理念</a></li><li><a href=#%e4%b8%89%e4%bb%93%e5%ba%93%e6%9e%b6%e6%9e%84 aria-label=三仓库架构>三仓库架构</a></li><li><a href=#%e8%81%8c%e8%b4%a3%e5%88%92%e5%88%86 aria-label=职责划分>职责划分</a></ul></li><li><a href=#%e4%bb%93%e5%ba%93%e7%bb%93%e6%9e%84 aria-label="📁 仓库结构">📁 仓库结构</a><ul></li><li><a href=#hugoserver%e4%b8%bb%e4%bb%93%e5%ba%93 aria-label="hugo-server (主仓库)">hugo-server (主仓库)</a></li><li><a href=#obsidiannotes%e5%86%85%e5%ae%b9%e4%bb%93%e5%ba%93 aria-label="obsidian-notes (内容仓库)">obsidian-notes (内容仓库)</a></ul></li><li><a href=#%e9%85%8d%e7%bd%ae%e6%ad%a5%e9%aa%a4 aria-label="⚙️ 配置步骤">⚙️ 配置步骤</a><ul></li><li><a href=#1%e5%88%9b%e5%bb%baobsidiannotes%e4%bb%93%e5%ba%93 aria-label="1. 创建 obsidian-notes 仓库">1. 创建 obsidian-notes 仓库</a></li><li><a href=#2%e5%a4%87%e4%bb%bd%e7%8e%b0%e6%9c%89%e5%86%85%e5%ae%b9 aria-label="2. 备份现有内容">2. 备份现有内容</a></li><li><a href=#3%e4%bb%8e%e4%b8%bb%e4%bb%93%e5%ba%93%e7%a7%bb%e9%99%a4content%e7%9b%ae%e5%bd%95 aria-label="3. 从主仓库移除 content 目录">3. 从主仓库移除 content 目录</a></li><li><a href=#4%e6%b7%bb%e5%8a%a0obsidiannotes%e4%bd%9c%e4%b8%ba%e5%ad%90%e6%a8%a1%e5%9d%97 aria-label="4. 添加 obsidian-notes 作为子模块">4. 添加 obsidian-notes 作为子模块</a></li><li><a href=#5%e8%bf%81%e7%a7%bb%e5%86%85%e5%ae%b9%e5%88%b0obsidiannotes aria-label="5. 迁移内容到 obsidian-notes">5. 迁移内容到 obsidian-notes</a></li><li><a href=#6%e9%85%8d%e7%bd%aegithubtoken aria-label="6. 配置 GitHub Token">6. 配置 GitHub Token</a></ul></li><li><a href=#%e5%b7%a5%e4%bd%9c%e6%b5%81%e8%af%a6%e8%a7%a3 aria-label="🔄 工作流详解">🔄 工作流详解</a><ul></li><li><a href=#githubactions%e5%b7%a5%e4%bd%9c%e6%b5%81%e6%96%87%e4%bb%b6 aria-label="GitHub Actions 工作流文件">GitHub Actions 工作流文件</a></li><li><a href=#%e6%89%a7%e8%a1%8c%e6%b5%81%e7%a8%8b aria-label=执行流程>执行流程</a></ul></li><li><a href=#%e6%97%a5%e5%b8%b8%e4%bd%bf%e7%94%a8 aria-label="📝 日常使用">📝 日常使用</a><ul></li><li><a href=#%e4%bd%bf%e7%94%a8obsidian%e5%86%99%e4%bd%9c aria-label="使用 Obsidian 写作">使用 Obsidian 写作</a></li><li><a href=#%e6%9c%ac%e5%9c%b0%e9%a2%84%e8%a7%88 aria-label=本地预览>本地预览</a></ul></li><li><a href=#%e6%95%85%e9%9a%9c%e6%8e%92%e9%99%a4 aria-label="🐛 故障排除">🐛 故障排除</a><ul></li><li><a href=#%e9%97%ae%e9%a2%981%e5%ad%90%e6%a8%a1%e5%9d%97url%e6%9c%aa%e6%89%be%e5%88%b0 aria-label="问题 1: 子模块 URL 未找到">问题 1: 子模块 URL 未找到</a></li><li><a href=#%e9%97%ae%e9%a2%982public%e5%ad%90%e6%a8%a1%e5%9d%97%e5%bc%95%e7%94%a8%e8%bf%87%e6%97%b6 aria-label="问题 2: public 子模块引用过时">问题 2: public 子模块引用过时</a></li><li><a href=#%e9%97%ae%e9%a2%983githubactions%e6%9d%83%e9%99%90%e4%b8%8d%e8%b6%b3 aria-label="问题 3: GitHub Actions 权限不足">问题 3: GitHub Actions 权限不足</a></li><li><a href=#%e9%97%ae%e9%a2%984%e7%bd%91%e7%ab%99%e6%b2%a1%e6%9c%89%e6%9b%b4%e6%96%b0 aria-label="问题 4: 网站没有更新">问题 4: 网站没有更新</a></ul></li><li><a href=#%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a1%b9 aria-label="⚠️ 注意事项">⚠️ 注意事项</a><ul></li><li><a href=#%e5%85%b3%e9%94%ae%e6%96%87%e4%bb%b6 aria-label=关键文件>关键文件</a></li><li><a href=#%e4%b8%8d%e8%a6%81%e5%81%9a%e7%9a%84%e4%ba%8b aria-label=不要做的事>不要做的事</a></li><li><a href=#%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5 aria-label=最佳实践>最佳实践</a></ul></li><li><a href=#%e8%bf%9b%e9%98%b6%e4%bc%98%e5%8c%96 aria-label="🚀 进阶优化">🚀 进阶优化</a><ul></li><li><a href=#1%e6%b7%bb%e5%8a%a0%e8%af%84%e8%ae%ba%e7%b3%bb%e7%bb%9fgiscus aria-label="1. 添加评论系统 (Giscus)">1. 添加评论系统 (Giscus)</a></li><li><a href=#2rssfeed aria-label="2. RSS Feed">2. RSS Feed</a></li><li><a href=#3%e4%bc%98%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e9%80%9f%e5%ba%a6 aria-label="3. 优化工作流速度">3. 优化工作流速度</a></ul></li><li><a href=#%e6%a3%80%e6%9f%a5%e6%b8%85%e5%8d%95 aria-label="✅ 检查清单">✅ 检查清单</a></li><li><a href=#%e6%80%bb%e7%bb%93 aria-label="🎉 总结">🎉 总结</a></li><li><a href=#%e5%8f%82%e8%80%83%e8%b5%84%e6%ba%90 aria-label="📚 参考资源">📚 参考资源</a></ul></div></details></div></aside><script>let activeElement,elements;window.addEventListener("DOMContentLoaded",function(){if(checkTocPosition(),elements=document.querySelectorAll("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]"),elements.length>0){activeElement=elements[0];const t=encodeURI(activeElement.getAttribute("id")).toLowerCase(),e=document.querySelector(`.inner ul li a[href="#${t}"]`);e&&e.classList.add("active")}},!1),window.addEventListener("resize",function(){checkTocPosition()},!1),window.addEventListener("scroll",()=>{if(!elements||elements.length===0)return;activeElement=Array.from(elements).find(e=>{if(getOffsetTop(e)-window.pageYOffset>0&&getOffsetTop(e)-window.pageYOffset<window.innerHeight/2)return e})||activeElement,elements.forEach(e=>{const n=encodeURI(e.getAttribute("id")).toLowerCase(),t=document.querySelector(`.inner ul li a[href="#${n}"]`);if(t)if(e===activeElement){{t.classList.add("active");const e=document.querySelector(".toc .inner");if(e){const n=t.offsetTop,s=e.clientHeight,o=t.clientHeight,i=n-s/2+o/2;e.scrollTo({top:i,behavior:"smooth"})}}}else t.classList.remove("active")})},!1);const main=parseInt(getComputedStyle(document.body).getPropertyValue("--article-width"),10),toc=parseInt(getComputedStyle(document.body).getPropertyValue("--toc-width"),10),gap=parseInt(getComputedStyle(document.body).getPropertyValue("--gap"),10);function checkTocPosition(){const t=document.body.scrollWidth,e=document.getElementById("toc-container");if(!e)return;t>=1e3?e.classList.add("wide"):e.classList.remove("wide")}function getOffsetTop(e){if(!e.getClientRects().length)return 0;let t=e.getBoundingClientRect(),n=e.ownerDocument.defaultView;return t.top+n.pageYOffset}</script><div class=post-content><h1 id=hugo-博客自动化工作流完整指南>Hugo 博客自动化工作流完整指南<a hidden class=anchor aria-hidden=true href=#hugo-博客自动化工作流完整指南>#</a></h1><p>这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。</p><hr><h2 id=-目录>📋 目录<a hidden class=anchor aria-hidden=true href=#-目录>#</a></h2><ol><li><a href=#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84>系统架构</a></li><li><a href=#%E4%BB%93%E5%BA%93%E7%BB%93%E6%9E%84>仓库结构</a></li><li><a href=#%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4>配置步骤</a></li><li><a href=#%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AF%A6%E8%A7%A3>工作流详解</a></li><li><a href=#%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8>日常使用</a></li><li><a href=#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4>故障排除</a></li><li><a href=#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9>注意事项</a></li><li><a href=#%E8%BF%9B%E9%98%B6%E4%BC%98%E5%8C%96>进阶优化</a></li></ol><hr><h2 id=-系统架构>🏗️ 系统架构<a hidden class=anchor aria-hidden=true href=#-系统架构>#</a></h2><h3 id=设计理念>设计理念<a hidden class=anchor aria-hidden=true href=#设计理念>#</a></h3><p><strong>目标：</strong> 实现"写作 → 提交 → 自动发布"的无缝工作流。</p><p><strong>核心原则：</strong></p><ul><li>内容与配置分离</li><li>环境可复现</li><li>自动化部署</li><li>本地与 CI 一致</li></ul><h3 id=三仓库架构>三仓库架构<a hidden class=anchor aria-hidden=true href=#三仓库架构>#</a></h3><pre tabindex=0><code>hugo-server (主仓库)
 ├── jesse-blog/
 │   ├── content/      → obsidian-notes (子模块)
 │   ├── public/       → JiashuaiXu.github.io (子模块)
@@ -594,41 +214,7 @@ obsidian-notes (内容仓库)
 
 JiashuaiXu.github.io (部署仓库)
 └── (Hugo 生成的静态文件)
-</code></pre><h3 id="职责划分">职责划分<a hidden class="anchor" aria-hidden="true" href="#职责划分">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>仓库</th>
-          <th>用途</th>
-          <th>操作频率</th>
-          <th>是否需要手动操作</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>hugo-server</code></td>
-          <td>Hugo 配置、主题、Nix 环境</td>
-          <td>偶尔更新配置</td>
-          <td>是</td>
-      </tr>
-      <tr>
-          <td><code>obsidian-notes</code></td>
-          <td><strong>编写内容</strong>（日常工作）</td>
-          <td>频繁提交</td>
-          <td>是</td>
-      </tr>
-      <tr>
-          <td><code>JiashuaiXu.github.io</code></td>
-          <td>托管静态网站</td>
-          <td>自动更新</td>
-          <td><strong>否</strong></td>
-      </tr>
-  </tbody>
-</table>
-<hr>
-<h2 id="-仓库结构">📁 仓库结构<a hidden class="anchor" aria-hidden="true" href="#-仓库结构">#</a></h2>
-<h3 id="hugo-server-主仓库">hugo-server (主仓库)<a hidden class="anchor" aria-hidden="true" href="#hugo-server-主仓库">#</a></h3>
-<pre tabindex="0"><code>hugo-server/
+</code></pre><h3 id=职责划分>职责划分<a hidden class=anchor aria-hidden=true href=#职责划分>#</a></h3><table><thead><tr><th>仓库</th><th>用途</th><th>操作频率</th><th>是否需要手动操作</th></tr></thead><tbody><tr><td><code>hugo-server</code></td><td>Hugo 配置、主题、Nix 环境</td><td>偶尔更新配置</td><td>是</td></tr><tr><td><code>obsidian-notes</code></td><td><strong>编写内容</strong>（日常工作）</td><td>频繁提交</td><td>是</td></tr><tr><td><code>JiashuaiXu.github.io</code></td><td>托管静态网站</td><td>自动更新</td><td><strong>否</strong></td></tr></tbody></table><hr><h2 id=-仓库结构>📁 仓库结构<a hidden class=anchor aria-hidden=true href=#-仓库结构>#</a></h2><h3 id=hugo-server-主仓库>hugo-server (主仓库)<a hidden class=anchor aria-hidden=true href=#hugo-server-主仓库>#</a></h3><pre tabindex=0><code>hugo-server/
 ├── .gitmodules              # ⚠️ 关键：子模块配置
 ├── flake.nix                # Nix 环境定义
 ├── deploy.sh                # 本地部署脚本
@@ -638,555 +224,126 @@ JiashuaiXu.github.io (部署仓库)
     ├── themes/
     │   └── hugo-PaperMod/   # 当前使用的主题
     └── hugo.toml            # Hugo 配置文件
-</code></pre><h3 id="obsidian-notes-内容仓库">obsidian-notes (内容仓库)<a hidden class="anchor" aria-hidden="true" href="#obsidian-notes-内容仓库">#</a></h3>
-<pre tabindex="0"><code>obsidian-notes/
+</code></pre><h3 id=obsidian-notes-内容仓库>obsidian-notes (内容仓库)<a hidden class=anchor aria-hidden=true href=#obsidian-notes-内容仓库>#</a></h3><pre tabindex=0><code>obsidian-notes/
 ├── .github/workflows/
 │   └── deploy.yml           # ⚠️ 自动部署工作流
 ├── README.md
 ├── posts/                   # 博客文章目录
 ├── about/
 └── archive/
-</code></pre><hr>
-<h2 id="-配置步骤">⚙️ 配置步骤<a hidden class="anchor" aria-hidden="true" href="#-配置步骤">#</a></h2>
-<h3 id="1-创建-obsidian-notes-仓库">1. 创建 obsidian-notes 仓库<a hidden class="anchor" aria-hidden="true" href="#1-创建-obsidian-notes-仓库">#</a></h3>
-<p>在 GitHub 创建空仓库：</p>
-<ul>
-<li>仓库名: <code>obsidian-notes</code></li>
-<li>可见性: Public</li>
-</ul>
-<h3 id="2-备份现有内容">2. 备份现有内容<a hidden class="anchor" aria-hidden="true" href="#2-备份现有内容">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /path/to/hugo-server
-</span></span><span style="display:flex;"><span>cp -r jesse-blog/content ~/hugo-content-backup
-</span></span></code></pre></div><p><strong>⚠️ 重要：</strong> 始终先备份，避免数据丢失！</p>
-<h3 id="3-从主仓库移除-content-目录">3. 从主仓库移除 content 目录<a hidden class="anchor" aria-hidden="true" href="#3-从主仓库移除-content-目录">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /path/to/hugo-server
-</span></span><span style="display:flex;"><span>git rm -rf jesse-blog/content
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;Remove content directory to prepare for submodule&#34;</span>
-</span></span><span style="display:flex;"><span>git push origin main
-</span></span></code></pre></div><h3 id="4-添加-obsidian-notes-作为子模块">4. 添加 obsidian-notes 作为子模块<a hidden class="anchor" aria-hidden="true" href="#4-添加-obsidian-notes-作为子模块">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /path/to/hugo-server
-</span></span><span style="display:flex;"><span>git submodule add https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># ⚠️ 确保 .gitmodules 中有正确的配置</span>
-</span></span><span style="display:flex;"><span>cat .gitmodules | grep -A <span style="color:#bd93f9">2</span> <span style="color:#f1fa8c">&#34;jesse-blog/content&#34;</span>
-</span></span></code></pre></div><p><strong>⚠️ 关键点：</strong> <code>.gitmodules</code> 必须包含子模块配置，否则 GitHub Actions 会失败！</p>
-<h3 id="5-迁移内容到-obsidian-notes">5. 迁移内容到 obsidian-notes<a hidden class="anchor" aria-hidden="true" href="#5-迁移内容到-obsidian-notes">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> jesse-blog/content
-</span></span><span style="display:flex;"><span>git checkout -b main
-</span></span><span style="display:flex;"><span>cp -r ~/hugo-content-backup/* .
-</span></span><span style="display:flex;"><span>git add .
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;Initial commit: Import existing content&#34;</span>
-</span></span><span style="display:flex;"><span>git push -u origin main
-</span></span></code></pre></div><h3 id="6-配置-github-token">6. 配置 GitHub Token<a hidden class="anchor" aria-hidden="true" href="#6-配置-github-token">#</a></h3>
-<p><strong>创建 Personal Access Token：</strong></p>
-<ol>
-<li>访问: <a href="https://github.com/settings/tokens">https://github.com/settings/tokens</a></li>
-<li>Generate new token (classic)</li>
-<li>权限: <code>repo</code> + <code>workflow</code></li>
-<li>复制 token</li>
-</ol>
-<p><strong>添加 Secret：</strong></p>
-<ol>
-<li>访问: <a href="https://github.com/JiashuaiXu/obsidian-notes/settings/secrets/actions">https://github.com/JiashuaiXu/obsidian-notes/settings/secrets/actions</a></li>
-<li>New repository secret</li>
-<li>Name: <code>GH_PAT</code></li>
-<li>Value: 粘贴 token</li>
-</ol>
-<hr>
-<h2 id="-工作流详解">🔄 工作流详解<a hidden class="anchor" aria-hidden="true" href="#-工作流详解">#</a></h2>
-<h3 id="github-actions-工作流文件">GitHub Actions 工作流文件<a hidden class="anchor" aria-hidden="true" href="#github-actions-工作流文件">#</a></h3>
-<p>位置: <code>obsidian-notes/.github/workflows/deploy.yml</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#ff79c6">name</span>: Deploy Hugo Site
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">on</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">push</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">branches</span>: [main]
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">workflow_dispatch</span>:
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#ff79c6">jobs</span>:
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">deploy</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">runs-on</span>: ubuntu-latest
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">steps</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#ff79c6">uses</span>: actions/checkout@v4
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">with</span>:
-</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">repository</span>: JiashuaiXu/hugo-server
-</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">token</span>: ${{ secrets.GH_PAT }}
-</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">submodules</span>: recursive
-</span></span><span style="display:flex;"><span>          
-</span></span><span style="display:flex;"><span>      - <span style="color:#ff79c6">uses</span>: DeterminateSystems/nix-installer-action@main
-</span></span><span style="display:flex;"><span>      - <span style="color:#ff79c6">uses</span>: DeterminateSystems/magic-nix-cache-action@main
-</span></span><span style="display:flex;"><span>      
-</span></span><span style="display:flex;"><span>      - <span style="color:#ff79c6">name</span>: Build Hugo site
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">run</span>: |<span style="color:#f1fa8c">
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          cd jesse-blog
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          nix develop --command bash -c &#34;hugo -D&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          </span>
-</span></span><span style="display:flex;"><span>      - <span style="color:#ff79c6">name</span>: Deploy to GitHub Pages
-</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">run</span>: |<span style="color:#f1fa8c">
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          cd jesse-blog/public
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          git config user.name &#34;GitHub Actions&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          git config user.email &#34;actions@github.com&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          git add .
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          if ! git diff --staged --quiet; then
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">            git commit -m &#34;Deploy: $(date +&#39;%Y-%m-%d %H:%M:%S&#39;)&#34;
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">            git push origin main
-</span></span></span><span style="display:flex;"><span><span style="color:#f1fa8c">          fi</span>
-</span></span></code></pre></div><h3 id="执行流程">执行流程<a hidden class="anchor" aria-hidden="true" href="#执行流程">#</a></h3>
-<ol>
-<li><strong>触发</strong>: 推送到 obsidian-notes</li>
-<li><strong>Checkout</strong>: 检出 hugo-server + 所有子模块</li>
-<li><strong>安装 Nix</strong>: 约 30 秒</li>
-<li><strong>设置缓存</strong>: 首次 3 分钟，后续 10 秒</li>
-<li><strong>编译</strong>: Hugo 生成静态文件 (20-30 秒)</li>
-<li><strong>部署</strong>: 推送到 GitHub Pages (5-10 秒)</li>
-</ol>
-<p><strong>总时间</strong>: 首次 ~5 分钟，后续 ~1.5 分钟</p>
-<hr>
-<h2 id="-日常使用">📝 日常使用<a hidden class="anchor" aria-hidden="true" href="#-日常使用">#</a></h2>
-<h3 id="使用-obsidian-写作">使用 Obsidian 写作<a hidden class="anchor" aria-hidden="true" href="#使用-obsidian-写作">#</a></h3>
-<p><strong>设置 Vault:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#6272a4"># 方式 1: 直接使用 obsidian-notes</span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 在 Obsidian 中打开 /path/to/hugo-server/jesse-blog/content</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 方式 2: 创建符号链接</span>
-</span></span><span style="display:flex;"><span>ln -s /path/to/hugo-server/jesse-blog/content ~/obsidian-vault/blog
-</span></span></code></pre></div><p><strong>创建文章:</strong></p>
-<p>文章需要包含 frontmatter：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>title: &#34;文章标题&#34;
-</span></span><span style="display:flex;"><span>date: 2025-11-11T17:50:00+08:00
-</span></span><span style="display:flex;"><span>draft: false
-</span></span><span style="display:flex;"><span>tags: [&#34;标签1&#34;, &#34;标签2&#34;]
-</span></span><span style="display:flex;"><span>categories: [&#34;分类&#34;]
-</span></span><span style="display:flex;"><span>---
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="font-weight:bold"># 正文
-</span></span></span><span style="display:flex;"><span><span style="font-weight:bold"></span>
-</span></span><span style="display:flex;"><span>内容...
-</span></span></code></pre></div><p><strong>发布流程:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /path/to/obsidian-notes
-</span></span><span style="display:flex;"><span>git add posts/my-article.md
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;Add: 新文章&#34;</span>
-</span></span><span style="display:flex;"><span>git push origin main
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 等待 1-3 分钟，访问 https://JiashuaiXu.github.io/</span>
-</span></span></code></pre></div><h3 id="本地预览">本地预览<a hidden class="anchor" aria-hidden="true" href="#本地预览">#</a></h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /path/to/hugo-server
-</span></span><span style="display:flex;"><span>nix develop
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> jesse-blog
-</span></span><span style="display:flex;"><span>hugo server -D
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#6272a4"># 访问 http://localhost:1313</span>
-</span></span></code></pre></div><hr>
-<h2 id="-故障排除">🐛 故障排除<a hidden class="anchor" aria-hidden="true" href="#-故障排除">#</a></h2>
-<h3 id="问题-1-子模块-url-未找到">问题 1: 子模块 URL 未找到<a hidden class="anchor" aria-hidden="true" href="#问题-1-子模块-url-未找到">#</a></h3>
-<p><strong>错误:</strong></p>
-<pre tabindex="0"><code>No url found for submodule path &#39;jesse-blog/content&#39; in .gitmodules
-</code></pre><p><strong>解决:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /path/to/hugo-server
-</span></span><span style="display:flex;"><span>git submodule add -f https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content
-</span></span><span style="display:flex;"><span>git add .gitmodules jesse-blog/content
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;Fix: Add content submodule to .gitmodules&#34;</span>
-</span></span><span style="display:flex;"><span>git push origin main
-</span></span></code></pre></div><h3 id="问题-2-public-子模块引用过时">问题 2: public 子模块引用过时<a hidden class="anchor" aria-hidden="true" href="#问题-2-public-子模块引用过时">#</a></h3>
-<p><strong>错误:</strong></p>
-<pre tabindex="0"><code>remote error: upload-pack: not our ref 4a838c8...
-</code></pre><p><strong>解决:</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> /path/to/hugo-server
-</span></span><span style="display:flex;"><span>git fetch origin
-</span></span><span style="display:flex;"><span>git reset --hard origin/main
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> jesse-blog/public
-</span></span><span style="display:flex;"><span>git checkout main
-</span></span><span style="display:flex;"><span>git pull origin main
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">cd</span> ../..
-</span></span><span style="display:flex;"><span>git add jesse-blog/public
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#f1fa8c">&#34;Update public submodule&#34;</span>
-</span></span><span style="display:flex;"><span>git push origin main
-</span></span></code></pre></div><h3 id="问题-3-github-actions-权限不足">问题 3: GitHub Actions 权限不足<a hidden class="anchor" aria-hidden="true" href="#问题-3-github-actions-权限不足">#</a></h3>
-<p><strong>错误:</strong></p>
-<pre tabindex="0"><code>remote: Permission denied to github-actions[bot]
-</code></pre><p><strong>解决:</strong></p>
-<ol>
-<li>检查 <code>GH_PAT</code> token 权限</li>
-<li>确保包含 <code>repo</code> + <code>workflow</code></li>
-<li>重新生成并更新 Secret</li>
-</ol>
-<h3 id="问题-4-网站没有更新">问题 4: 网站没有更新<a hidden class="anchor" aria-hidden="true" href="#问题-4-网站没有更新">#</a></h3>
-<p><strong>检查清单:</strong></p>
-<ul>
-<li><input disabled="" type="checkbox"> GitHub Actions 是否成功运行？</li>
-<li><input disabled="" type="checkbox"> 文章 frontmatter 中 <code>draft: false</code>？</li>
-<li><input disabled="" type="checkbox"> 文章日期不在未来？</li>
-<li><input disabled="" type="checkbox"> 等待 2-5 分钟（GitHub Pages 缓存）</li>
-<li><input disabled="" type="checkbox"> 强制刷新浏览器 (Ctrl + Shift + R)</li>
-</ul>
-<hr>
-<h2 id="-注意事项">⚠️ 注意事项<a hidden class="anchor" aria-hidden="true" href="#-注意事项">#</a></h2>
-<h3 id="关键文件">关键文件<a hidden class="anchor" aria-hidden="true" href="#关键文件">#</a></h3>
-<table>
-  <thead>
-      <tr>
-          <th>文件</th>
-          <th>位置</th>
-          <th>重要性</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><code>.gitmodules</code></td>
-          <td><code>hugo-server/</code></td>
-          <td>⭐⭐⭐⭐⭐</td>
-      </tr>
-      <tr>
-          <td><code>deploy.yml</code></td>
-          <td><code>obsidian-notes/.github/workflows/</code></td>
-          <td>⭐⭐⭐⭐⭐</td>
-      </tr>
-      <tr>
-          <td><code>GH_PAT</code></td>
-          <td>GitHub Secret</td>
-          <td>⭐⭐⭐⭐⭐</td>
-      </tr>
-      <tr>
-          <td><code>flake.nix</code></td>
-          <td><code>hugo-server/</code></td>
-          <td>⭐⭐⭐⭐</td>
-      </tr>
-      <tr>
-          <td><code>hugo.toml</code></td>
-          <td><code>hugo-server/jesse-blog/</code></td>
-          <td>⭐⭐⭐⭐</td>
-      </tr>
-  </tbody>
-</table>
-<h3 id="不要做的事">不要做的事<a hidden class="anchor" aria-hidden="true" href="#不要做的事">#</a></h3>
-<p>❌ <strong>不要直接在 JiashuaiXu.github.io 编辑文件</strong> - 会被覆盖<br>
-❌ <strong>不要在主仓库的 content/ 提交内容</strong> - 必须在 obsidian-notes 提交<br>
-❌ <strong>不要忘记添加 frontmatter</strong> - Hugo 不会识别<br>
-❌ <strong>不要泄露 GH_PAT</strong> - 等同于密码</p>
-<h3 id="最佳实践">最佳实践<a hidden class="anchor" aria-hidden="true" href="#最佳实践">#</a></h3>
-<p>✅ 定期备份内容<br>
-✅ 使用有意义的 commit 消息<br>
-✅ 文章命名使用 kebab-case<br>
-✅ 检查 Actions 运行状态<br>
-✅ 本地测试后再推送</p>
-<hr>
-<h2 id="-进阶优化">🚀 进阶优化<a hidden class="anchor" aria-hidden="true" href="#-进阶优化">#</a></h2>
-<h3 id="1-添加评论系统-giscus">1. 添加评论系统 (Giscus)<a hidden class="anchor" aria-hidden="true" href="#1-添加评论系统-giscus">#</a></h3>
-<p>使用 GitHub Discussions 作为评论：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[params.giscus]
-</span></span><span style="display:flex;"><span>  repo = <span style="color:#f1fa8c">&#34;JiashuaiXu/JiashuaiXu.github.io&#34;</span>
-</span></span><span style="display:flex;"><span>  repoId = <span style="color:#f1fa8c">&#34;YOUR_REPO_ID&#34;</span>
-</span></span><span style="display:flex;"><span>  category = <span style="color:#f1fa8c">&#34;General&#34;</span>
-</span></span><span style="display:flex;"><span>  categoryId = <span style="color:#f1fa8c">&#34;YOUR_CATEGORY_ID&#34;</span>
-</span></span></code></pre></div><h3 id="2-rss-feed">2. RSS Feed<a hidden class="anchor" aria-hidden="true" href="#2-rss-feed">#</a></h3>
-<p>已自动启用：</p>
-<ul>
-<li>全站: <a href="https://JiashuaiXu.github.io/feed.xml">https://JiashuaiXu.github.io/feed.xml</a></li>
-<li>分类: <a href="https://JiashuaiXu.github.io/categories/">https://JiashuaiXu.github.io/categories/</a>技术/feed.xml</li>
-</ul>
-<h3 id="3-优化工作流速度">3. 优化工作流速度<a hidden class="anchor" aria-hidden="true" href="#3-优化工作流速度">#</a></h3>
-<p>使用 <code>peaceiris/actions-hugo</code> 替代 Nix（更快）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>- <span style="color:#ff79c6">name</span>: Setup Hugo
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">uses</span>: peaceiris/actions-hugo@v2
-</span></span><span style="display:flex;"><span>  <span style="color:#ff79c6">with</span>:
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">hugo-version</span>: <span style="color:#f1fa8c">&#39;0.152.2&#39;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">extended</span>: <span style="color:#ff79c6">true</span>
-</span></span></code></pre></div><p><strong>对比:</strong></p>
-<ul>
-<li>Nix: 1.5-5 分钟（首次慢，后续快）</li>
-<li>actions-hugo: 30 秒（始终快速）</li>
-</ul>
-<p><strong>权衡:</strong> Nix 保证环境一致性，actions-hugo 更快但可能有版本差异。</p>
-<hr>
-<h2 id="-检查清单">✅ 检查清单<a hidden class="anchor" aria-hidden="true" href="#-检查清单">#</a></h2>
-<p>配置完成前确认：</p>
-<ul>
-<li><input disabled="" type="checkbox"> 创建 obsidian-notes 仓库</li>
-<li><input disabled="" type="checkbox"> 配置 .gitmodules 包含 content 子模块</li>
-<li><input disabled="" type="checkbox"> 创建 .github/workflows/deploy.yml</li>
-<li><input disabled="" type="checkbox"> 生成 GitHub PAT</li>
-<li><input disabled="" type="checkbox"> 添加 GH_PAT Secret</li>
-<li><input disabled="" type="checkbox"> 测试工作流</li>
-<li><input disabled="" type="checkbox"> 验证网站更新</li>
-<li><input disabled="" type="checkbox"> 配置 Obsidian Vault</li>
-<li><input disabled="" type="checkbox"> 设置本地 Nix 环境</li>
-</ul>
-<hr>
-<h2 id="-总结">🎉 总结<a hidden class="anchor" aria-hidden="true" href="#-总结">#</a></h2>
-<p>现在你拥有了完全自动化的博客系统：</p>
-<p>✅ 内容管理: Obsidian 或任何 Markdown 编辑器<br>
-✅ 版本控制: Git 跟踪所有更改<br>
-✅ 自动部署: 推送即发布<br>
-✅ 环境一致: Nix 保证本地和 CI 相同<br>
-✅ 分离关注点: 内容、配置、部署独立</p>
-<p><strong>工作流:</strong> 写作 → 提交 → 自动发布 → 完成！🚀</p>
-<hr>
-<h2 id="-参考资源">📚 参考资源<a hidden class="anchor" aria-hidden="true" href="#-参考资源">#</a></h2>
-<ul>
-<li><a href="https://gohugo.io/documentation/">Hugo 官方文档</a></li>
-<li><a href="https://docs.github.com/actions">GitHub Actions 文档</a></li>
-<li><a href="https://nixos.wiki/wiki/Flakes">Nix Flakes 入门</a></li>
-<li><a href="https://github.com/adityatelange/hugo-PaperMod/wiki">PaperMod 主题</a></li>
-<li><a href="https://obsidian.md/">Obsidian</a></li>
-</ul>
-<hr>
-<p><em>最后更新: 2025-11-11</em><br>
-<em>文档版本: 1.0</em></p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://JiashuaiXu.github.io/tags/hugo/">Hugo</a></li>
-      <li><a href="https://JiashuaiXu.github.io/tags/github-actions/">GitHub Actions</a></li>
-      <li><a href="https://JiashuaiXu.github.io/tags/nix/">Nix</a></li>
-      <li><a href="https://JiashuaiXu.github.io/tags/obsidian/">Obsidian</a></li>
-      <li><a href="https://JiashuaiXu.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/">工作流</a></li>
-      <li><a href="https://JiashuaiXu.github.io/tags/%E6%96%87%E6%A1%A3/">文档</a></li>
-    </ul>
-
-
-<ul class="share-buttons">
-    <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on x"
-            href="https://x.com/intent/tweet/?text=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f&amp;hashtags=Hugo%2cGitHubActions%2cNix%2cObsidian%2c%e5%b7%a5%e4%bd%9c%e6%b5%81%2c%e6%96%87%e6%a1%a3">
-            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
-                <path
-                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
-            </svg>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on linkedin"
-            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f&amp;title=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;summary=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;source=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f">
-            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
-                <path
-                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
-            </svg>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on reddit"
-            href="https://reddit.com/submit?url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f&title=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97">
-            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
-                <path
-                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
-            </svg>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on facebook"
-            href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f">
-            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
-                <path
-                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
-            </svg>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on whatsapp"
-            href="https://api.whatsapp.com/send?text=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97%20-%20https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f">
-            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
-                <path
-                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
-            </svg>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on telegram"
-            href="https://telegram.me/share/url?text=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f">
-            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
-                <path
-                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
-            </svg>
-        </a>
-    </li>
-    <li>
-        <a target="_blank" rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on ycombinator"
-            href="https://news.ycombinator.com/submitlink?t=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&u=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f">
-            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
-                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
-                <path
-                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
-            </svg>
-        </a>
-    </li>
-</ul>
-
-  </footer><div id="comments-section" style="margin-top: 2rem;"><script src="https://giscus.app/client.js"
-          data-repo="JiashuaiXu/hugo-server"
-          data-repo-id="R_kgDOKqBmgw"
-          data-category="Announcements"
-          data-category-id="DIC_kwDOKqBmg84Cx8uf"
-          data-mapping="pathname"
-          data-strict="0"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="bottom"
-          data-theme="preferred_color_scheme"
-          data-lang="zh-CN"
-          data-loading="lazy"
-          crossorigin="anonymous"
-          async>
-  </script></div>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2025 <a href="https://JiashuaiXu.github.io/">Jesse&#39;s Blog</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-<div class="reading-progress-bar" id="reading-progress"></div>
-
-
-<script>
-  window.addEventListener('scroll', function() {
-    const progressBar = document.getElementById('reading-progress');
-    if (!progressBar) return;
-    
-    const windowHeight = window.innerHeight;
-    const documentHeight = document.documentElement.scrollHeight;
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
-    const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
-    progressBar.style.width = Math.min(scrollPercent, 100) + '%';
-  });
-</script>
-
-
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<div class="site-stats">
-  <span id="busuanzi_container_site_pv">
-    <span id="busuanzi_value_site_pv"></span> total views
-  </span>
-  <span class="footer-separator"> · </span>
-  <span id="busuanzi_container_site_uv">
-    <span id="busuanzi_value_site_uv"></span> visitors
-  </span>
-</div>
-
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+</code></pre><hr><h2 id=-配置步骤>⚙️ 配置步骤<a hidden class=anchor aria-hidden=true href=#-配置步骤>#</a></h2><h3 id=1-创建-obsidian-notes-仓库>1. 创建 obsidian-notes 仓库<a hidden class=anchor aria-hidden=true href=#1-创建-obsidian-notes-仓库>#</a></h3><p>在 GitHub 创建空仓库：</p><ul><li>仓库名: <code>obsidian-notes</code></li><li>可见性: Public</li></ul><h3 id=2-备份现有内容>2. 备份现有内容<a hidden class=anchor aria-hidden=true href=#2-备份现有内容>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> /path/to/hugo-server
+</span></span><span style=display:flex><span>cp -r jesse-blog/content ~/hugo-content-backup
+</span></span></code></pre></div><p><strong>⚠️ 重要：</strong> 始终先备份，避免数据丢失！</p><h3 id=3-从主仓库移除-content-目录>3. 从主仓库移除 content 目录<a hidden class=anchor aria-hidden=true href=#3-从主仓库移除-content-目录>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> /path/to/hugo-server
+</span></span><span style=display:flex><span>git rm -rf jesse-blog/content
+</span></span><span style=display:flex><span>git commit -m <span style=color:#f1fa8c>&#34;Remove content directory to prepare for submodule&#34;</span>
+</span></span><span style=display:flex><span>git push origin main
+</span></span></code></pre></div><h3 id=4-添加-obsidian-notes-作为子模块>4. 添加 obsidian-notes 作为子模块<a hidden class=anchor aria-hidden=true href=#4-添加-obsidian-notes-作为子模块>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> /path/to/hugo-server
+</span></span><span style=display:flex><span>git submodule add https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4># ⚠️ 确保 .gitmodules 中有正确的配置</span>
+</span></span><span style=display:flex><span>cat .gitmodules | grep -A <span style=color:#bd93f9>2</span> <span style=color:#f1fa8c>&#34;jesse-blog/content&#34;</span>
+</span></span></code></pre></div><p><strong>⚠️ 关键点：</strong> <code>.gitmodules</code> 必须包含子模块配置，否则 GitHub Actions 会失败！</p><h3 id=5-迁移内容到-obsidian-notes>5. 迁移内容到 obsidian-notes<a hidden class=anchor aria-hidden=true href=#5-迁移内容到-obsidian-notes>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> jesse-blog/content
+</span></span><span style=display:flex><span>git checkout -b main
+</span></span><span style=display:flex><span>cp -r ~/hugo-content-backup/* .
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>git commit -m <span style=color:#f1fa8c>&#34;Initial commit: Import existing content&#34;</span>
+</span></span><span style=display:flex><span>git push -u origin main
+</span></span></code></pre></div><h3 id=6-配置-github-token>6. 配置 GitHub Token<a hidden class=anchor aria-hidden=true href=#6-配置-github-token>#</a></h3><p><strong>创建 Personal Access Token：</strong></p><ol><li>访问: <a href=https://github.com/settings/tokens>https://github.com/settings/tokens</a></li><li>Generate new token (classic)</li><li>权限: <code>repo</code> + <code>workflow</code></li><li>复制 token</li></ol><p><strong>添加 Secret：</strong></p><ol><li>访问: <a href=https://github.com/JiashuaiXu/obsidian-notes/settings/secrets/actions>https://github.com/JiashuaiXu/obsidian-notes/settings/secrets/actions</a></li><li>New repository secret</li><li>Name: <code>GH_PAT</code></li><li>Value: 粘贴 token</li></ol><hr><h2 id=-工作流详解>🔄 工作流详解<a hidden class=anchor aria-hidden=true href=#-工作流详解>#</a></h2><h3 id=github-actions-工作流文件>GitHub Actions 工作流文件<a hidden class=anchor aria-hidden=true href=#github-actions-工作流文件>#</a></h3><p>位置: <code>obsidian-notes/.github/workflows/deploy.yml</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#ff79c6>name</span>: Deploy Hugo Site
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>on</span>:
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>push</span>:
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>branches</span>: [main]
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>workflow_dispatch</span>:
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ff79c6>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>deploy</span>:
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>runs-on</span>: ubuntu-latest
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ff79c6>uses</span>: actions/checkout@v4
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#ff79c6>repository</span>: JiashuaiXu/hugo-server
+</span></span><span style=display:flex><span>          <span style=color:#ff79c6>token</span>: ${{ secrets.GH_PAT }}
+</span></span><span style=display:flex><span>          <span style=color:#ff79c6>submodules</span>: recursive
+</span></span><span style=display:flex><span>          
+</span></span><span style=display:flex><span>      - <span style=color:#ff79c6>uses</span>: DeterminateSystems/nix-installer-action@main
+</span></span><span style=display:flex><span>      - <span style=color:#ff79c6>uses</span>: DeterminateSystems/magic-nix-cache-action@main
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>      - <span style=color:#ff79c6>name</span>: Build Hugo site
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>run</span>: |<span style=color:#f1fa8c>
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          cd jesse-blog
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          nix develop --command bash -c &#34;hugo -D&#34;
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          </span>
+</span></span><span style=display:flex><span>      - <span style=color:#ff79c6>name</span>: Deploy to GitHub Pages
+</span></span><span style=display:flex><span>        <span style=color:#ff79c6>run</span>: |<span style=color:#f1fa8c>
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          cd jesse-blog/public
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          git config user.name &#34;GitHub Actions&#34;
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          git config user.email &#34;actions@github.com&#34;
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          git add .
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          if ! git diff --staged --quiet; then
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>            git commit -m &#34;Deploy: $(date +&#39;%Y-%m-%d %H:%M:%S&#39;)&#34;
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>            git push origin main
+</span></span></span><span style=display:flex><span><span style=color:#f1fa8c>          fi</span>
+</span></span></code></pre></div><h3 id=执行流程>执行流程<a hidden class=anchor aria-hidden=true href=#执行流程>#</a></h3><ol><li><strong>触发</strong>: 推送到 obsidian-notes</li><li><strong>Checkout</strong>: 检出 hugo-server + 所有子模块</li><li><strong>安装 Nix</strong>: 约 30 秒</li><li><strong>设置缓存</strong>: 首次 3 分钟，后续 10 秒</li><li><strong>编译</strong>: Hugo 生成静态文件 (20-30 秒)</li><li><strong>部署</strong>: 推送到 GitHub Pages (5-10 秒)</li></ol><p><strong>总时间</strong>: 首次 ~5 分钟，后续 ~1.5 分钟</p><hr><h2 id=-日常使用>📝 日常使用<a hidden class=anchor aria-hidden=true href=#-日常使用>#</a></h2><h3 id=使用-obsidian-写作>使用 Obsidian 写作<a hidden class=anchor aria-hidden=true href=#使用-obsidian-写作>#</a></h3><p><strong>设置 Vault:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#6272a4># 方式 1: 直接使用 obsidian-notes</span>
+</span></span><span style=display:flex><span><span style=color:#6272a4># 在 Obsidian 中打开 /path/to/hugo-server/jesse-blog/content</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4># 方式 2: 创建符号链接</span>
+</span></span><span style=display:flex><span>ln -s /path/to/hugo-server/jesse-blog/content ~/obsidian-vault/blog
+</span></span></code></pre></div><p><strong>创建文章:</strong></p><p>文章需要包含 frontmatter：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-markdown data-lang=markdown><span style=display:flex><span>---
+</span></span><span style=display:flex><span>title: &#34;文章标题&#34;
+</span></span><span style=display:flex><span>date: 2025-11-11T17:50:00+08:00
+</span></span><span style=display:flex><span>draft: false
+</span></span><span style=display:flex><span>tags: [&#34;标签1&#34;, &#34;标签2&#34;]
+</span></span><span style=display:flex><span>categories: [&#34;分类&#34;]
+</span></span><span style=display:flex><span>---
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=font-weight:700># 正文
+</span></span></span><span style=display:flex><span><span style=font-weight:700></span>
+</span></span><span style=display:flex><span>内容...
+</span></span></code></pre></div><p><strong>发布流程:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> /path/to/obsidian-notes
+</span></span><span style=display:flex><span>git add posts/my-article.md
+</span></span><span style=display:flex><span>git commit -m <span style=color:#f1fa8c>&#34;Add: 新文章&#34;</span>
+</span></span><span style=display:flex><span>git push origin main
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4># 等待 1-3 分钟，访问 https://JiashuaiXu.github.io/</span>
+</span></span></code></pre></div><h3 id=本地预览>本地预览<a hidden class=anchor aria-hidden=true href=#本地预览>#</a></h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> /path/to/hugo-server
+</span></span><span style=display:flex><span>nix develop
+</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> jesse-blog
+</span></span><span style=display:flex><span>hugo server -D
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#6272a4># 访问 http://localhost:1313</span>
+</span></span></code></pre></div><hr><h2 id=-故障排除>🐛 故障排除<a hidden class=anchor aria-hidden=true href=#-故障排除>#</a></h2><h3 id=问题-1-子模块-url-未找到>问题 1: 子模块 URL 未找到<a hidden class=anchor aria-hidden=true href=#问题-1-子模块-url-未找到>#</a></h3><p><strong>错误:</strong></p><pre tabindex=0><code>No url found for submodule path &#39;jesse-blog/content&#39; in .gitmodules
+</code></pre><p><strong>解决:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> /path/to/hugo-server
+</span></span><span style=display:flex><span>git submodule add -f https://github.com/JiashuaiXu/obsidian-notes.git jesse-blog/content
+</span></span><span style=display:flex><span>git add .gitmodules jesse-blog/content
+</span></span><span style=display:flex><span>git commit -m <span style=color:#f1fa8c>&#34;Fix: Add content submodule to .gitmodules&#34;</span>
+</span></span><span style=display:flex><span>git push origin main
+</span></span></code></pre></div><h3 id=问题-2-public-子模块引用过时>问题 2: public 子模块引用过时<a hidden class=anchor aria-hidden=true href=#问题-2-public-子模块引用过时>#</a></h3><p><strong>错误:</strong></p><pre tabindex=0><code>remote error: upload-pack: not our ref 4a838c8...
+</code></pre><p><strong>解决:</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> /path/to/hugo-server
+</span></span><span style=display:flex><span>git fetch origin
+</span></span><span style=display:flex><span>git reset --hard origin/main
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> jesse-blog/public
+</span></span><span style=display:flex><span>git checkout main
+</span></span><span style=display:flex><span>git pull origin main
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#8be9fd;font-style:italic>cd</span> ../..
+</span></span><span style=display:flex><span>git add jesse-blog/public
+</span></span><span style=display:flex><span>git commit -m <span style=color:#f1fa8c>&#34;Update public submodule&#34;</span>
+</span></span><span style=display:flex><span>git push origin main
+</span></span></code></pre></div><h3 id=问题-3-github-actions-权限不足>问题 3: GitHub Actions 权限不足<a hidden class=anchor aria-hidden=true href=#问题-3-github-actions-权限不足>#</a></h3><p><strong>错误:</strong></p><pre tabindex=0><code>remote: Permission denied to github-actions[bot]
+</code></pre><p><strong>解决:</strong></p><ol><li>检查 <code>GH_PAT</code> token 权限</li><li>确保包含 <code>repo</code> + <code>workflow</code></li><li>重新生成并更新 Secret</li></ol><h3 id=问题-4-网站没有更新>问题 4: 网站没有更新<a hidden class=anchor aria-hidden=true href=#问题-4-网站没有更新>#</a></h3><p><strong>检查清单:</strong></p><ul><li><input disabled type=checkbox> GitHub Actions 是否成功运行？</li><li><input disabled type=checkbox> 文章 frontmatter 中 <code>draft: false</code>？</li><li><input disabled type=checkbox> 文章日期不在未来？</li><li><input disabled type=checkbox> 等待 2-5 分钟（GitHub Pages 缓存）</li><li><input disabled type=checkbox> 强制刷新浏览器 (Ctrl + Shift + R)</li></ul><hr><h2 id=-注意事项>⚠️ 注意事项<a hidden class=anchor aria-hidden=true href=#-注意事项>#</a></h2><h3 id=关键文件>关键文件<a hidden class=anchor aria-hidden=true href=#关键文件>#</a></h3><table><thead><tr><th>文件</th><th>位置</th><th>重要性</th></tr></thead><tbody><tr><td><code>.gitmodules</code></td><td><code>hugo-server/</code></td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><code>deploy.yml</code></td><td><code>obsidian-notes/.github/workflows/</code></td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><code>GH_PAT</code></td><td>GitHub Secret</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><code>flake.nix</code></td><td><code>hugo-server/</code></td><td>⭐⭐⭐⭐</td></tr><tr><td><code>hugo.toml</code></td><td><code>hugo-server/jesse-blog/</code></td><td>⭐⭐⭐⭐</td></tr></tbody></table><h3 id=不要做的事>不要做的事<a hidden class=anchor aria-hidden=true href=#不要做的事>#</a></h3><p>❌ <strong>不要直接在 JiashuaiXu.github.io 编辑文件</strong> - 会被覆盖<br>❌ <strong>不要在主仓库的 content/ 提交内容</strong> - 必须在 obsidian-notes 提交<br>❌ <strong>不要忘记添加 frontmatter</strong> - Hugo 不会识别<br>❌ <strong>不要泄露 GH_PAT</strong> - 等同于密码</p><h3 id=最佳实践>最佳实践<a hidden class=anchor aria-hidden=true href=#最佳实践>#</a></h3><p>✅ 定期备份内容<br>✅ 使用有意义的 commit 消息<br>✅ 文章命名使用 kebab-case<br>✅ 检查 Actions 运行状态<br>✅ 本地测试后再推送</p><hr><h2 id=-进阶优化>🚀 进阶优化<a hidden class=anchor aria-hidden=true href=#-进阶优化>#</a></h2><h3 id=1-添加评论系统-giscus>1. 添加评论系统 (Giscus)<a hidden class=anchor aria-hidden=true href=#1-添加评论系统-giscus>#</a></h3><p>使用 GitHub Discussions 作为评论：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-toml data-lang=toml><span style=display:flex><span>[params.giscus]
+</span></span><span style=display:flex><span>  repo = <span style=color:#f1fa8c>&#34;JiashuaiXu/JiashuaiXu.github.io&#34;</span>
+</span></span><span style=display:flex><span>  repoId = <span style=color:#f1fa8c>&#34;YOUR_REPO_ID&#34;</span>
+</span></span><span style=display:flex><span>  category = <span style=color:#f1fa8c>&#34;General&#34;</span>
+</span></span><span style=display:flex><span>  categoryId = <span style=color:#f1fa8c>&#34;YOUR_CATEGORY_ID&#34;</span>
+</span></span></code></pre></div><h3 id=2-rss-feed>2. RSS Feed<a hidden class=anchor aria-hidden=true href=#2-rss-feed>#</a></h3><p>已自动启用：</p><ul><li>全站: <a href=https://JiashuaiXu.github.io/feed.xml>https://JiashuaiXu.github.io/feed.xml</a></li><li>分类: <a href=https://JiashuaiXu.github.io/categories/>https://JiashuaiXu.github.io/categories/</a>技术/feed.xml</li></ul><h3 id=3-优化工作流速度>3. 优化工作流速度<a hidden class=anchor aria-hidden=true href=#3-优化工作流速度>#</a></h3><p>使用 <code>peaceiris/actions-hugo</code> 替代 Nix（更快）：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>- <span style=color:#ff79c6>name</span>: Setup Hugo
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>uses</span>: peaceiris/actions-hugo@v2
+</span></span><span style=display:flex><span>  <span style=color:#ff79c6>with</span>:
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>hugo-version</span>: <span style=color:#f1fa8c>&#39;0.152.2&#39;</span>
+</span></span><span style=display:flex><span>    <span style=color:#ff79c6>extended</span>: <span style=color:#ff79c6>true</span>
+</span></span></code></pre></div><p><strong>对比:</strong></p><ul><li>Nix: 1.5-5 分钟（首次慢，后续快）</li><li>actions-hugo: 30 秒（始终快速）</li></ul><p><strong>权衡:</strong> Nix 保证环境一致性，actions-hugo 更快但可能有版本差异。</p><hr><h2 id=-检查清单>✅ 检查清单<a hidden class=anchor aria-hidden=true href=#-检查清单>#</a></h2><p>配置完成前确认：</p><ul><li><input disabled type=checkbox> 创建 obsidian-notes 仓库</li><li><input disabled type=checkbox> 配置 .gitmodules 包含 content 子模块</li><li><input disabled type=checkbox> 创建 .github/workflows/deploy.yml</li><li><input disabled type=checkbox> 生成 GitHub PAT</li><li><input disabled type=checkbox> 添加 GH_PAT Secret</li><li><input disabled type=checkbox> 测试工作流</li><li><input disabled type=checkbox> 验证网站更新</li><li><input disabled type=checkbox> 配置 Obsidian Vault</li><li><input disabled type=checkbox> 设置本地 Nix 环境</li></ul><hr><h2 id=-总结>🎉 总结<a hidden class=anchor aria-hidden=true href=#-总结>#</a></h2><p>现在你拥有了完全自动化的博客系统：</p><p>✅ 内容管理: Obsidian 或任何 Markdown 编辑器<br>✅ 版本控制: Git 跟踪所有更改<br>✅ 自动部署: 推送即发布<br>✅ 环境一致: Nix 保证本地和 CI 相同<br>✅ 分离关注点: 内容、配置、部署独立</p><p><strong>工作流:</strong> 写作 → 提交 → 自动发布 → 完成！🚀</p><hr><h2 id=-参考资源>📚 参考资源<a hidden class=anchor aria-hidden=true href=#-参考资源>#</a></h2><ul><li><a href=https://gohugo.io/documentation/>Hugo 官方文档</a></li><li><a href=https://docs.github.com/actions>GitHub Actions 文档</a></li><li><a href=https://nixos.wiki/wiki/Flakes>Nix Flakes 入门</a></li><li><a href=https://github.com/adityatelange/hugo-PaperMod/wiki>PaperMod 主题</a></li><li><a href=https://obsidian.md/>Obsidian</a></li></ul><hr><p><em>最后更新: 2025-11-11</em><br><em>文档版本: 1.0</em></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://JiashuaiXu.github.io/tags/hugo/>Hugo</a></li><li><a href=https://JiashuaiXu.github.io/tags/github-actions/>GitHub Actions</a></li><li><a href=https://JiashuaiXu.github.io/tags/nix/>Nix</a></li><li><a href=https://JiashuaiXu.github.io/tags/obsidian/>Obsidian</a></li><li><a href=https://JiashuaiXu.github.io/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/>工作流</a></li><li><a href=https://JiashuaiXu.github.io/tags/%E6%96%87%E6%A1%A3/>文档</a></li></ul><nav class=paginav><a class=prev href=https://JiashuaiXu.github.io/posts/test-automated-deployment-new/><span class=title>« Prev</span><br><span>自动化部署测试</span>
+</a><a class=next href=https://JiashuaiXu.github.io/posts/blog-automation-setup/><span class=title>Next »</span><br><span>博客自动化部署配置全记录</span></a></nav><ul class=share-buttons><li><a target=_blank rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on x" href="https://x.com/intent/tweet/?text=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f&amp;hashtags=Hugo%2cGitHubActions%2cNix%2cObsidian%2c%e5%b7%a5%e4%bd%9c%e6%b5%81%2c%e6%96%87%e6%a1%a3"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446C483.971.0 512 28.03 512 62.554zM269.951 190.75 182.567 75.216H56L207.216 272.95 63.9 436.783h61.366L235.9 310.383l96.667 126.4H456L298.367 228.367l134-153.151H371.033zM127.633 110h36.468l219.38 290.065H349.5z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f&amp;title=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;summary=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;source=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM160.461 423.278V197.561h-75.04v225.717h75.04zm270.539.0V293.839c0-69.333-37.018-101.586-86.381-101.586-39.804.0-57.634 21.891-67.617 37.266v-31.958h-75.021c.995 21.181.0 225.717.0 225.717h75.02V297.222c0-6.748.486-13.492 2.474-18.315 5.414-13.475 17.767-27.434 38.494-27.434 27.135.0 38.007 20.707 38.007 51.037v120.768H431zM123.448 88.722C97.774 88.722 81 105.601 81 127.724c0 21.658 16.264 39.002 41.455 39.002h.484c26.165.0 42.452-17.344 42.452-39.002-.485-22.092-16.241-38.954-41.943-39.002z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on reddit" href="https://reddit.com/submit?url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f&title=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zM446 265.638c0-22.964-18.616-41.58-41.58-41.58-11.211.0-21.361 4.457-28.841 11.666-28.424-20.508-67.586-33.757-111.204-35.278l18.941-89.121 61.884 13.157c.756 15.734 13.642 28.29 29.56 28.29 16.407.0 29.706-13.299 29.706-29.701.0-16.403-13.299-29.702-29.706-29.702-11.666.0-21.657 6.792-26.515 16.578l-69.105-14.69c-1.922-.418-3.939-.042-5.585 1.036-1.658 1.073-2.811 2.761-3.224 4.686l-21.152 99.438c-44.258 1.228-84.046 14.494-112.837 35.232-7.468-7.164-17.589-11.591-28.757-11.591-22.965.0-41.585 18.616-41.585 41.58.0 16.896 10.095 31.41 24.568 37.918-.639 4.135-.99 8.328-.99 12.576.0 63.977 74.469 115.836 166.33 115.836s166.334-51.859 166.334-115.836c0-4.218-.347-8.387-.977-12.493 14.564-6.47 24.735-21.034 24.735-38.001zM326.526 373.831c-20.27 20.241-59.115 21.816-70.534 21.816-11.428.0-50.277-1.575-70.522-21.82-3.007-3.008-3.007-7.882.0-10.889 3.003-2.999 7.882-3.003 10.885.0 12.777 12.781 40.11 17.317 59.637 17.317 19.522.0 46.86-4.536 59.657-17.321 3.016-2.999 7.886-2.995 10.885.008 3.008 3.011 3.003 7.882-.008 10.889zm-5.23-48.781c-16.373.0-29.701-13.324-29.701-29.698.0-16.381 13.328-29.714 29.701-29.714 16.378.0 29.706 13.333 29.706 29.714.0 16.374-13.328 29.698-29.706 29.698zM160.91 295.348c0-16.381 13.328-29.71 29.714-29.71 16.369.0 29.689 13.329 29.689 29.71.0 16.373-13.32 29.693-29.689 29.693-16.386.0-29.714-13.32-29.714-29.693z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on facebook" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H342.978V319.085h66.6l12.672-82.621h-79.272v-53.617c0-22.603 11.073-44.636 46.58-44.636H425.6v-70.34s-32.71-5.582-63.982-5.582c-65.288.0-107.96 39.569-107.96 111.204v62.971h-72.573v82.621h72.573V512h-191.104c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on whatsapp" href="https://api.whatsapp.com/send?text=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97%20-%20https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f"><svg viewBox="0 0 512 512" height="30" width="30" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554v386.892C512 483.97 483.97 512 449.446 512H62.554c-34.524.0-62.554-28.03-62.554-62.554V62.554c0-34.524 28.029-62.554 62.554-62.554h386.892zm-58.673 127.703c-33.842-33.881-78.847-52.548-126.798-52.568-98.799.0-179.21 80.405-179.249 179.234-.013 31.593 8.241 62.428 23.927 89.612l-25.429 92.884 95.021-24.925c26.181 14.28 55.659 21.807 85.658 21.816h.074c98.789.0 179.206-80.413 179.247-179.243.018-47.895-18.61-92.93-52.451-126.81zM263.976 403.485h-.06c-26.734-.01-52.954-7.193-75.828-20.767l-5.441-3.229-56.386 14.792 15.05-54.977-3.542-5.637c-14.913-23.72-22.791-51.136-22.779-79.287.033-82.142 66.867-148.971 149.046-148.971 39.793.014 77.199 15.531 105.329 43.692 28.128 28.16 43.609 65.592 43.594 105.4-.034 82.149-66.866 148.983-148.983 148.984zm81.721-111.581c-4.479-2.242-26.499-13.075-30.604-14.571-4.105-1.495-7.091-2.241-10.077 2.241-2.986 4.483-11.569 14.572-14.182 17.562-2.612 2.988-5.225 3.364-9.703 1.12-4.479-2.241-18.91-6.97-36.017-22.23C231.8 264.15 222.81 249.484 220.198 245s-.279-6.908 1.963-9.14c2.016-2.007 4.48-5.232 6.719-7.847 2.24-2.615 2.986-4.484 4.479-7.472 1.493-2.99.747-5.604-.374-7.846-1.119-2.241-10.077-24.288-13.809-33.256-3.635-8.733-7.327-7.55-10.077-7.688-2.609-.13-5.598-.158-8.583-.158-2.986.0-7.839 1.121-11.944 5.604-4.105 4.484-15.675 15.32-15.675 37.364.0 22.046 16.048 43.342 18.287 46.332 2.24 2.99 31.582 48.227 76.511 67.627 10.685 4.615 19.028 7.371 25.533 9.434 10.728 3.41 20.492 2.929 28.209 1.775 8.605-1.285 26.499-10.833 30.231-21.295 3.732-10.464 3.732-19.431 2.612-21.298-1.119-1.869-4.105-2.99-8.583-5.232z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on telegram" href="https://telegram.me/share/url?text=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&amp;url=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f"><svg viewBox="2 2 28 28" height="30" width="30" fill="currentColor"><path d="M26.49 29.86H5.5a3.37 3.37.0 01-2.47-1 3.35 3.35.0 01-1-2.47V5.48A3.36 3.36.0 013 3 3.37 3.37.0 015.5 2h21A3.38 3.38.0 0129 3a3.36 3.36.0 011 2.46V26.37a3.35 3.35.0 01-1 2.47 3.38 3.38.0 01-2.51 1.02zm-5.38-6.71a.79.79.0 00.85-.66L24.73 9.24a.55.55.0 00-.18-.46.62.62.0 00-.41-.17q-.08.0-16.53 6.11a.59.59.0 00-.41.59.57.57.0 00.43.52l4 1.24 1.61 4.83a.62.62.0 00.63.43.56.56.0 00.4-.17L16.54 20l4.09 3A.9.9.0 0021.11 23.15zM13.8 20.71l-1.21-4q8.72-5.55 8.78-5.55c.15.0.23.0.23.16a.18.18.0 010 .06s-2.51 2.3-7.52 6.8z"/></svg></a></li><li><a target=_blank rel="noopener noreferrer" aria-label="share Hugo 博客自动化工作流完整指南 on ycombinator" href="https://news.ycombinator.com/submitlink?t=Hugo%20%e5%8d%9a%e5%ae%a2%e8%87%aa%e5%8a%a8%e5%8c%96%e5%b7%a5%e4%bd%9c%e6%b5%81%e5%ae%8c%e6%95%b4%e6%8c%87%e5%8d%97&u=https%3a%2f%2fJiashuaiXu.github.io%2fposts%2fcomplete-workflow-guide%2f"><svg width="30" height="30" viewBox="0 0 512 512" fill="currentColor"><path d="M449.446.0C483.971.0 512 28.03 512 62.554V449.446C512 483.97 483.97 512 449.446 512H62.554C28.03 512 0 483.97.0 449.446V62.554C0 28.03 28.029.0 62.554.0H449.446zM183.8767 87.9921h-62.034L230.6673 292.4508V424.0079h50.6655V292.4508L390.1575 87.9921H328.1233L256 238.2489z"/></svg></a></li></ul></footer><div id=comments-section style=margin-top:2rem><script src=https://giscus.app/client.js data-repo=JiashuaiXu/hugo-server data-repo-id=R_kgDOKqBmgw data-category=Announcements data-category-id=DIC_kwDOKqBmg84Cx8uf data-mapping=pathname data-strict=0 data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-theme=preferred_color_scheme data-lang=zh-CN data-loading=lazy crossorigin=anonymous async></script></div></article></main><footer class=footer><span>&copy; 2025 <a href=https://JiashuaiXu.github.io/>Jesse's Blog</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg></a><div class=reading-progress-bar id=reading-progress></div><script>window.addEventListener("scroll",function(){const e=document.getElementById("reading-progress");if(!e)return;const t=window.innerHeight,n=document.documentElement.scrollHeight,s=window.pageYOffset||document.documentElement.scrollTop,o=s/(n-t)*100;e.style.width=Math.min(o,100)+"%"})</script><script async src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js></script><div class=site-stats><span id=busuanzi_container_site_pv><span id=busuanzi_value_site_pv></span> total views
+</span><span class=footer-separator>· </span><span id=busuanzi_container_site_uv><span id=busuanzi_value_site_uv></span> visitors</span></div><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

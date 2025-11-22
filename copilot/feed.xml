@@ -1,91 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Copilots on Jesse&#39;s Blog</title>
-    <link>https://JiashuaiXu.github.io/copilot/</link>
-    <description>Recent content in Copilots on Jesse&#39;s Blog</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>zh-cn</language>
-    <atom:link href="https://JiashuaiXu.github.io/copilot/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</guid>
-      <description>&lt;p&gt;Add relevant emojis to enhance {}. Follow these rules:
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Copilots on Jesse's Blog</title><link>https://JiashuaiXu.github.io/copilot/</link><description>Recent content in Copilots on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>zh-cn</language><atom:link href="https://JiashuaiXu.github.io/copilot/feed.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</guid><description>&lt;p&gt;Add relevant emojis to enhance {}. Follow these rules:
 1. Insert emojis at natural breaks in the text
 2. Never place two emojis next to each other
 3. Keep all original text unchanged
 4. Choose emojis that match the context and tone
-Return only the emojified text.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/explain-like-i-am-5/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/explain-like-i-am-5/</guid>
-      <description>&lt;p&gt;Explain {} in simple terms that a 5-year-old would understand:
+Return only the emojified text.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/explain-like-i-am-5/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/explain-like-i-am-5/</guid><description>&lt;p&gt;Explain {} in simple terms that a 5-year-old would understand:
 1. Use basic vocabulary
 2. Include simple analogies
 3. Break down complex concepts
-Return only the simplified explanation.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/fix-grammar-and-spelling/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/fix-grammar-and-spelling/</guid>
-      <description>&lt;p&gt;Fix the grammar and spelling of {}. Preserve all formatting, line breaks, and special characters. Do not add or remove any content. Return only the corrected text.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-glossary/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-glossary/</guid>
-      <description>&lt;p&gt;Create a glossary of important terms, concepts, and phrases from {}. Format each entry as &amp;ldquo;Term: Definition&amp;rdquo;. Sort entries alphabetically. Return only the glossary.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-table-of-contents/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-table-of-contents/</guid>
-      <description>&lt;p&gt;Generate a hierarchical table of contents for {}. Use appropriate heading levels (H1, H2, H3, etc.). Include page numbers if present. Return only the table of contents.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-longer/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-longer/</guid>
-      <description>&lt;p&gt;Expand {} to twice its length by:
+Return only the simplified explanation.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/fix-grammar-and-spelling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/fix-grammar-and-spelling/</guid><description>&lt;p&gt;Fix the grammar and spelling of {}. Preserve all formatting, line breaks, and special characters. Do not add or remove any content. Return only the corrected text.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-glossary/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-glossary/</guid><description>&lt;p&gt;Create a glossary of important terms, concepts, and phrases from {}. Format each entry as &amp;ldquo;Term: Definition&amp;rdquo;. Sort entries alphabetically. Return only the glossary.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-table-of-contents/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/generate-table-of-contents/</guid><description>&lt;p&gt;Generate a hierarchical table of contents for {}. Use appropriate heading levels (H1, H2, H3, etc.). Include page numbers if present. Return only the table of contents.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-longer/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-longer/</guid><description>&lt;p&gt;Expand {} to twice its length by:
 1. Adding relevant details and examples
 2. Elaborating on key points
 3. Maintaining the original tone and style
-Return only the expanded text.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-shorter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-shorter/</guid>
-      <description>&lt;p&gt;Reduce {} to half its length while preserving these elements:
+Return only the expanded text.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-shorter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/make-shorter/</guid><description>&lt;p&gt;Reduce {} to half its length while preserving these elements:
 1. Main ideas and key points
 2. Essential details
 3. Original tone and style
-Return only the shortened text.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/remove-urls/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/remove-urls/</guid>
-      <description>&lt;p&gt;Remove all URLs from {}. Preserve all other content and formatting. URLs may be in various formats (http, https, www). Return only the text with URLs removed.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet-thread/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet-thread/</guid>
-      <description>&lt;p&gt;Convert {} into a Twitter thread following these rules:
+Return only the shortened text.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/remove-urls/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/remove-urls/</guid><description>&lt;p&gt;Remove all URLs from {}. Preserve all other content and formatting. URLs may be in various formats (http, https, www). Return only the text with URLs removed.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet-thread/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet-thread/</guid><description>&lt;p&gt;Convert {} into a Twitter thread following these rules:
 1. Each tweet must be under 240 characters
 2. Start with &amp;ldquo;THREAD START&amp;rdquo; on its own line
 3. Separate tweets with &amp;quot;&lt;/p&gt;
@@ -93,43 +23,12 @@ Return only the shortened text.&lt;/p&gt;</description>
 &lt;p&gt;&amp;quot;
 4. End with &amp;ldquo;THREAD END&amp;rdquo; on its own line
 5. Make content engaging and clear
-Return only the formatted thread.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet/</guid>
-      <description>&lt;p&gt;Rewrite {} as a single tweet with these requirements:
+Return only the formatted thread.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/rewrite-as-tweet/</guid><description>&lt;p&gt;Rewrite {} as a single tweet with these requirements:
 1. Maximum 280 characters
 2. Use concise, impactful language
 3. Maintain the core message
-Return only the tweet text.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/simplify/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/simplify/</guid>
-      <description>&lt;p&gt;Simplify {} to a 6th-grade reading level (ages 11-12). Use simple sentences, common words, and clear explanations. Maintain the original key concepts. Return only the simplified text.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/summarize/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/summarize/</guid>
-      <description>&lt;p&gt;Create a bullet-point summary of {}. Each bullet point should capture a key point. Return only the bullet-point summary.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/translate-to-chinese/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/translate-to-chinese/</guid>
-      <description>&lt;p&gt;Translate {} into Chinese:
+Return only the tweet text.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/simplify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/simplify/</guid><description>&lt;p&gt;Simplify {} to a 6th-grade reading level (ages 11-12). Use simple sentences, common words, and clear explanations. Maintain the original key concepts. Return only the simplified text.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/summarize/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/summarize/</guid><description>&lt;p&gt;Create a bullet-point summary of {}. Each bullet point should capture a key point. Return only the bullet-point summary.&lt;/p&gt;</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/translate-to-chinese/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/translate-to-chinese/</guid><description>&lt;p&gt;Translate {} into Chinese:
 1. Preserve the meaning and tone
 2. Maintain appropriate cultural context
 3. Keep formatting and structure
-Return only the translated text.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+Return only the translated text.&lt;/p&gt;</description></item></channel></rss>

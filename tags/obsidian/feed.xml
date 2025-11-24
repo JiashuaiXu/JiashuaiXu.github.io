@@ -1,20 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Obsidian on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/obsidian/</link><description>Recent content in Obsidian on Jesse's Blog</description><generator>Hugo -- 0.152.2</generator><language>zh-cn</language><lastBuildDate>Tue, 11 Nov 2025 17:50:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/obsidian/feed.xml" rel="self" type="application/rss+xml"/><item><title>Hugo 博客自动化工作流完整指南</title><link>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</link><pubDate>Tue, 11 Nov 2025 17:50:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</guid><description>&lt;h1 id="hugo-博客自动化工作流完整指南"&gt;Hugo 博客自动化工作流完整指南&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Obsidian on Jesse&#39;s Blog</title>
+    <link>https://JiashuaiXu.github.io/tags/obsidian/</link>
+    <description>Recent content in Obsidian on Jesse&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 11 Nov 2025 17:50:00 +0800</lastBuildDate>
+    <atom:link href="https://JiashuaiXu.github.io/tags/obsidian/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo 博客自动化工作流完整指南</title>
+      <link>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</link>
+      <pubDate>Tue, 11 Nov 2025 17:50:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/complete-workflow-guide/</guid>
+      <description>&lt;h1 id=&#34;hugo-博客自动化工作流完整指南&#34;&gt;Hugo 博客自动化工作流完整指南&lt;/h1&gt;
 &lt;p&gt;这是一份详尽的工作流文档，记录了从零搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程，包括所有细节、注意事项和故障排除方法。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id="-目录"&gt;📋 目录&lt;/h2&gt;
+&lt;h2 id=&#34;-目录&#34;&gt;📋 目录&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;a href="#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84"&gt;系统架构&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E4%BB%93%E5%BA%93%E7%BB%93%E6%9E%84"&gt;仓库结构&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4"&gt;配置步骤&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AF%A6%E8%A7%A3"&gt;工作流详解&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8"&gt;日常使用&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4"&gt;故障排除&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"&gt;注意事项&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="#%E8%BF%9B%E9%98%B6%E4%BC%98%E5%8C%96"&gt;进阶优化&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84&#34;&gt;系统架构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E4%BB%93%E5%BA%93%E7%BB%93%E6%9E%84&#34;&gt;仓库结构&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4&#34;&gt;配置步骤&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AF%A6%E8%A7%A3&#34;&gt;工作流详解&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8&#34;&gt;日常使用&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%95%85%E9%9A%9C%E6%8E%92%E9%99%A4&#34;&gt;故障排除&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9&#34;&gt;注意事项&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#%E8%BF%9B%E9%98%B6%E4%BC%98%E5%8C%96&#34;&gt;进阶优化&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
-&lt;h2 id="-系统架构"&gt;🏗️ 系统架构&lt;/h2&gt;
-&lt;h3 id="设计理念"&gt;设计理念&lt;/h3&gt;
+&lt;h2 id=&#34;-系统架构&#34;&gt;🏗️ 系统架构&lt;/h2&gt;
+&lt;h3 id=&#34;设计理念&#34;&gt;设计理念&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;目标：&lt;/strong&gt; 实现&amp;quot;写作 → 提交 → 自动发布&amp;quot;的无缝工作流。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;核心原则：&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -23,146 +38,167 @@
 &lt;li&gt;自动化部署&lt;/li&gt;
 &lt;li&gt;本地与 CI 一致&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="三仓库架构"&gt;三仓库架构&lt;/h3&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;hugo-server (主仓库)
+&lt;h3 id=&#34;三仓库架构&#34;&gt;三仓库架构&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo-server (主仓库)
 ├── jesse-blog/
-│ ├── content/ → obsidian-notes (子模块)
-│ ├── public/ → JiashuaiXu.github.io (子模块)
-│ ├── themes/
-│ └── hugo.toml
+│   ├── content/      → obsidian-notes (子模块)
+│   ├── public/       → JiashuaiXu.github.io (子模块)
+│   ├── themes/
+│   └── hugo.toml
 └── flake.nix
+
 obsidian-notes (内容仓库)
 ├── posts/
 ├── about/
 ├── archive/
 └── .github/workflows/deploy.yml
+
 JiashuaiXu.github.io (部署仓库)
 └── (Hugo 生成的静态文件)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="职责划分"&gt;职责划分&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;职责划分&#34;&gt;职责划分&lt;/h3&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;仓库&lt;/th&gt;
-&lt;th&gt;用途&lt;/th&gt;
-&lt;th&gt;操作频率&lt;/th&gt;
-&lt;th&gt;是否需要手动操作&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Hugo 配置、主题、Nix 环境&lt;/td&gt;
-&lt;td&gt;偶尔更新配置&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常工作）&lt;/td&gt;
-&lt;td&gt;频繁提交&lt;/td&gt;
-&lt;td&gt;是&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;托管静态网站&lt;/td&gt;
-&lt;td&gt;自动更新&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;否&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;仓库&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+          &lt;th&gt;操作频率&lt;/th&gt;
+          &lt;th&gt;是否需要手动操作&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hugo 配置、主题、Nix 环境&lt;/td&gt;
+          &lt;td&gt;偶尔更新配置&lt;/td&gt;
+          &lt;td&gt;是&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常工作）&lt;/td&gt;
+          &lt;td&gt;频繁提交&lt;/td&gt;
+          &lt;td&gt;是&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;托管静态网站&lt;/td&gt;
+          &lt;td&gt;自动更新&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;否&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id="-仓库结构"&gt;📁 仓库结构&lt;/h2&gt;
-&lt;h3 id="hugo-server-主仓库"&gt;hugo-server (主仓库)&lt;/h3&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;hugo-server/
-├── .gitmodules # ⚠️ 关键：子模块配置
-├── flake.nix # Nix 环境定义
-├── deploy.sh # 本地部署脚本
+&lt;h2 id=&#34;-仓库结构&#34;&gt;📁 仓库结构&lt;/h2&gt;
+&lt;h3 id=&#34;hugo-server-主仓库&#34;&gt;hugo-server (主仓库)&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo-server/
+├── .gitmodules              # ⚠️ 关键：子模块配置
+├── flake.nix                # Nix 环境定义
+├── deploy.sh                # 本地部署脚本
 └── jesse-blog/
-├── content/ # → obsidian-notes (子模块)
-├── public/ # → JiashuaiXu.github.io (子模块)
-├── themes/
-│ └── hugo-PaperMod/ # 当前使用的主题
-└── hugo.toml # Hugo 配置文件
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="obsidian-notes-内容仓库"&gt;obsidian-notes (内容仓库)&lt;/h3&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;obsidian-notes/
+    ├── content/             # → obsidian-notes (子模块)
+    ├── public/              # → JiashuaiXu.github.io (子模块)
+    ├── themes/
+    │   └── hugo-PaperMod/   # 当前使用的主题
+    └── hugo.toml            # Hugo 配置文件
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;obsidian-notes-内容仓库&#34;&gt;obsidian-notes (内容仓库)&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;obsidian-notes/
 ├── .github/workflows/
-│ └── deploy.yml # ⚠️ 自动部署工作流
+│   └── deploy.yml           # ⚠️ 自动部署工作流
 ├── README.md
-├── posts/ # 博客文章目录
+├── posts/                   # 博客文章目录
 ├── about/
 └── archive/
 &lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id="-配置步骤"&gt;⚙️ 配置步骤&lt;/h2&gt;
-&lt;h3 id="1-创建-obsidian-notes-仓库"&gt;1. 创建 obsidian-notes 仓库&lt;/h3&gt;
-&lt;p&gt;在 GitHub 创建空仓库：&lt;/p&gt;</description></item><item><title>博客自动化部署配置全记录</title><link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link><pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid><description>&lt;h1 id="博客自动化部署配置全记录"&gt;博客自动化部署配置全记录&lt;/h1&gt;
+&lt;h2 id=&#34;-配置步骤&#34;&gt;⚙️ 配置步骤&lt;/h2&gt;
+&lt;h3 id=&#34;1-创建-obsidian-notes-仓库&#34;&gt;1. 创建 obsidian-notes 仓库&lt;/h3&gt;
+&lt;p&gt;在 GitHub 创建空仓库：&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>博客自动化部署配置全记录</title>
+      <link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link>
+      <pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid>
+      <description>&lt;h1 id=&#34;博客自动化部署配置全记录&#34;&gt;博客自动化部署配置全记录&lt;/h1&gt;
 &lt;p&gt;记录从零开始搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程。&lt;/p&gt;
-&lt;h2 id="-目标"&gt;🎯 目标&lt;/h2&gt;
+&lt;h2 id=&#34;-目标&#34;&gt;🎯 目标&lt;/h2&gt;
 &lt;p&gt;实现一个完全自动化的博客发布流程：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在 Obsidian 中编写 Markdown 文章&lt;/li&gt;
 &lt;li&gt;提交到 Git 仓库&lt;/li&gt;
 &lt;li&gt;自动编译并发布到 GitHub Pages&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="-架构设计"&gt;🏗️ 架构设计&lt;/h2&gt;
-&lt;h3 id="仓库结构"&gt;仓库结构&lt;/h3&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;hugo-server (主仓库)
+&lt;h2 id=&#34;-架构设计&#34;&gt;🏗️ 架构设计&lt;/h2&gt;
+&lt;h3 id=&#34;仓库结构&#34;&gt;仓库结构&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo-server (主仓库)
 ├── jesse-blog/
-│ ├── content/ → obsidian-notes (子模块)
-│ ├── public/ → JiashuaiXu.github.io (子模块)
-│ ├── themes/
-│ └── hugo.toml
+│   ├── content/          → obsidian-notes (子模块)
+│   ├── public/           → JiashuaiXu.github.io (子模块)
+│   ├── themes/
+│   └── hugo.toml
 └── flake.nix
+
 obsidian-notes (内容仓库)
 ├── posts/
 ├── about/
 ├── archive/
 └── .github/workflows/
-└── deploy.yml # 自动部署工作流
+    └── deploy.yml        # 自动部署工作流
+
 JiashuaiXu.github.io (部署仓库)
 └── (Hugo 生成的静态文件)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="三个仓库的职责"&gt;三个仓库的职责&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;三个仓库的职责&#34;&gt;三个仓库的职责&lt;/h3&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;仓库&lt;/th&gt;
-&lt;th&gt;用途&lt;/th&gt;
-&lt;th&gt;操作频率&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Hugo 项目配置、主题管理&lt;/td&gt;
-&lt;td&gt;偶尔更新&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常操作）&lt;/td&gt;
-&lt;td&gt;频繁提交&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;托管静态网站&lt;/td&gt;
-&lt;td&gt;自动更新&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;仓库&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+          &lt;th&gt;操作频率&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hugo 项目配置、主题管理&lt;/td&gt;
+          &lt;td&gt;偶尔更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常操作）&lt;/td&gt;
+          &lt;td&gt;频繁提交&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;托管静态网站&lt;/td&gt;
+          &lt;td&gt;自动更新&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id="-实施步骤"&gt;📝 实施步骤&lt;/h2&gt;
-&lt;h3 id="1-子模块化内容管理"&gt;1. 子模块化内容管理&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description></item><item><title>Obsidian 与 Hugo 完美集成</title><link>https://JiashuaiXu.github.io/posts/obsidian-integration/</link><pubDate>Tue, 11 Nov 2025 17:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/obsidian-integration/</guid><description>&lt;h1 id="obsidian-与-hugo-完美集成"&gt;Obsidian 与 Hugo 完美集成&lt;/h1&gt;
+&lt;h2 id=&#34;-实施步骤&#34;&gt;📝 实施步骤&lt;/h2&gt;
+&lt;h3 id=&#34;1-子模块化内容管理&#34;&gt;1. 子模块化内容管理&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Obsidian 与 Hugo 完美集成</title>
+      <link>https://JiashuaiXu.github.io/posts/obsidian-integration/</link>
+      <pubDate>Tue, 11 Nov 2025 17:00:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/obsidian-integration/</guid>
+      <description>&lt;h1 id=&#34;obsidian-与-hugo-完美集成&#34;&gt;Obsidian 与 Hugo 完美集成&lt;/h1&gt;
 &lt;p&gt;使用 Obsidian 管理笔记内容，通过 Git 子模块连接到 Hugo 站点。&lt;/p&gt;
-&lt;h2 id="优势"&gt;优势&lt;/h2&gt;
+&lt;h2 id=&#34;优势&#34;&gt;优势&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;📝 在 Obsidian 中舒适地写作&lt;/li&gt;
 &lt;li&gt;🔄 通过 Git 版本控制&lt;/li&gt;
 &lt;li&gt;🚀 自动发布到博客&lt;/li&gt;
 &lt;li&gt;🎨 保持 Markdown 格式一致&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="工作流"&gt;工作流&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 1. 在 Obsidian 中编写&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 2. 提交到 obsidian-notes 仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git add .
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git commit -m &lt;span style="color:#f1fa8c"&gt;&amp;#34;New article&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git push
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 3. GitHub Actions 自动完成剩余工作！&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完美的写作体验！✨&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;工作流&#34;&gt;工作流&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 1. 在 Obsidian 中编写&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 2. 提交到 obsidian-notes 仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;New article&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 3. GitHub Actions 自动完成剩余工作！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完美的写作体验！✨&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

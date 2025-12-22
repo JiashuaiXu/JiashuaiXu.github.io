@@ -1,56 +1,90 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>自动化 on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link><description>Recent content in 自动化 on Jesse's Blog</description><generator>Hugo -- 0.153.1</generator><language>zh-cn</language><lastBuildDate>Thu, 20 Nov 2025 18:30:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/feed.xml" rel="self" type="application/rss+xml"/><item><title>GitHub Actions 自动更新测试</title><link>https://JiashuaiXu.github.io/posts/github-actions-auto-update-test/</link><pubDate>Thu, 20 Nov 2025 18:30:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/github-actions-auto-update-test/</guid><description>用于测试 GitHub Actions 自动更新主仓库子模块引用功能</description></item><item><title>自动化部署测试</title><link>https://JiashuaiXu.github.io/posts/test-automated-deployment-new/</link><pubDate>Thu, 20 Nov 2025 17:30:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/test-automated-deployment-new/</guid><description>用于测试自动化部署流程的文档</description></item><item><title>博客自动化部署配置全记录</title><link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link><pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid><description>&lt;h1 id="博客自动化部署配置全记录"&gt;博客自动化部署配置全记录&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>自动化 on Jesse&#39;s Blog</title>
+    <link>https://JiashuaiXu.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/</link>
+    <description>Recent content in 自动化 on Jesse&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 20 Nov 2025 18:30:00 +0800</lastBuildDate>
+    <atom:link href="https://JiashuaiXu.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Actions 自动更新测试</title>
+      <link>https://JiashuaiXu.github.io/posts/github-actions-auto-update-test/</link>
+      <pubDate>Thu, 20 Nov 2025 18:30:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/github-actions-auto-update-test/</guid>
+      <description>用于测试 GitHub Actions 自动更新主仓库子模块引用功能</description>
+    </item>
+    <item>
+      <title>自动化部署测试</title>
+      <link>https://JiashuaiXu.github.io/posts/test-automated-deployment-new/</link>
+      <pubDate>Thu, 20 Nov 2025 17:30:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/test-automated-deployment-new/</guid>
+      <description>用于测试自动化部署流程的文档</description>
+    </item>
+    <item>
+      <title>博客自动化部署配置全记录</title>
+      <link>https://JiashuaiXu.github.io/posts/blog-automation-setup/</link>
+      <pubDate>Tue, 11 Nov 2025 17:36:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/blog-automation-setup/</guid>
+      <description>&lt;h1 id=&#34;博客自动化部署配置全记录&#34;&gt;博客自动化部署配置全记录&lt;/h1&gt;
 &lt;p&gt;记录从零开始搭建 Hugo + Obsidian + GitHub Actions 自动化博客系统的完整过程。&lt;/p&gt;
-&lt;h2 id="-目标"&gt;🎯 目标&lt;/h2&gt;
+&lt;h2 id=&#34;-目标&#34;&gt;🎯 目标&lt;/h2&gt;
 &lt;p&gt;实现一个完全自动化的博客发布流程：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在 Obsidian 中编写 Markdown 文章&lt;/li&gt;
 &lt;li&gt;提交到 Git 仓库&lt;/li&gt;
 &lt;li&gt;自动编译并发布到 GitHub Pages&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id="-架构设计"&gt;🏗️ 架构设计&lt;/h2&gt;
-&lt;h3 id="仓库结构"&gt;仓库结构&lt;/h3&gt;
-&lt;pre tabindex="0"&gt;&lt;code&gt;hugo-server (主仓库)
+&lt;h2 id=&#34;-架构设计&#34;&gt;🏗️ 架构设计&lt;/h2&gt;
+&lt;h3 id=&#34;仓库结构&#34;&gt;仓库结构&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;hugo-server (主仓库)
 ├── jesse-blog/
-│ ├── content/ → obsidian-notes (子模块)
-│ ├── public/ → JiashuaiXu.github.io (子模块)
-│ ├── themes/
-│ └── hugo.toml
+│   ├── content/          → obsidian-notes (子模块)
+│   ├── public/           → JiashuaiXu.github.io (子模块)
+│   ├── themes/
+│   └── hugo.toml
 └── flake.nix
+
 obsidian-notes (内容仓库)
 ├── posts/
 ├── about/
 ├── archive/
 └── .github/workflows/
-└── deploy.yml # 自动部署工作流
+    └── deploy.yml        # 自动部署工作流
+
 JiashuaiXu.github.io (部署仓库)
 └── (Hugo 生成的静态文件)
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id="三个仓库的职责"&gt;三个仓库的职责&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;三个仓库的职责&#34;&gt;三个仓库的职责&lt;/h3&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;仓库&lt;/th&gt;
-&lt;th&gt;用途&lt;/th&gt;
-&lt;th&gt;操作频率&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;Hugo 项目配置、主题管理&lt;/td&gt;
-&lt;td&gt;偶尔更新&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常操作）&lt;/td&gt;
-&lt;td&gt;频繁提交&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
-&lt;td&gt;托管静态网站&lt;/td&gt;
-&lt;td&gt;自动更新&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;仓库&lt;/th&gt;
+          &lt;th&gt;用途&lt;/th&gt;
+          &lt;th&gt;操作频率&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;hugo-server&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;Hugo 项目配置、主题管理&lt;/td&gt;
+          &lt;td&gt;偶尔更新&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;obsidian-notes&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;编写内容&lt;/strong&gt;（日常操作）&lt;/td&gt;
+          &lt;td&gt;频繁提交&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;code&gt;JiashuaiXu.github.io&lt;/code&gt;&lt;/td&gt;
+          &lt;td&gt;托管静态网站&lt;/td&gt;
+          &lt;td&gt;自动更新&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h2 id="-实施步骤"&gt;📝 实施步骤&lt;/h2&gt;
-&lt;h3 id="1-子模块化内容管理"&gt;1. 子模块化内容管理&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id=&#34;-实施步骤&#34;&gt;📝 实施步骤&lt;/h2&gt;
+&lt;h3 id=&#34;1-子模块化内容管理&#34;&gt;1. 子模块化内容管理&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;问题：&lt;/strong&gt; 原来 &lt;code&gt;content/&lt;/code&gt; 目录直接在主仓库中，不便于独立管理。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

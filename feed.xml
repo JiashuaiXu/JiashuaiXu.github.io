@@ -214,10 +214,19 @@ JiashuaiXu.github.io (部署仓库)
 &lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 3. GitHub Actions 自动完成剩余工作！&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完美的写作体验！✨&lt;/p&gt;</description></item><item><title>About</title><link>https://JiashuaiXu.github.io/about/</link><pubDate>Wed, 26 Feb 2025 12:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/about/</guid><description>&lt;h1 id="about-this-blog"&gt;About This Blog&lt;/h1&gt;
 &lt;p&gt;Welcome to Jesse&amp;rsquo;s Blog! This is a personal space where I share my thoughts, experiences, and learnings.&lt;/p&gt;
-&lt;h2 id="using-obsidian-with-hugo"&gt;Using Obsidian with Hugo&lt;/h2&gt;
-&lt;p&gt;This blog is powered by &lt;a href="https://gohugo.io/"&gt;Hugo&lt;/a&gt; with the &lt;a href="https://github.com/adityatelange/hugo-PaperMod"&gt;PaperMod&lt;/a&gt; theme. I write my content using &lt;a href="https://obsidian.md/"&gt;Obsidian&lt;/a&gt;, a powerful knowledge management tool, and then publish it to this Hugo site.&lt;/p&gt;
-&lt;h2 id="contact"&gt;Contact&lt;/h2&gt;
-&lt;p&gt;Feel free to reach out to me through GitHub or other social platforms.&lt;/p&gt;</description></item><item><title>写作规范与命名规范</title><link>https://JiashuaiXu.github.io/posts/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</link><pubDate>Mon, 20 Jan 2025 10:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</guid><description>博客写作与文件命名规范，包含双链笔记的使用指南</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</guid><description>&lt;p&gt;Add relevant emojis to enhance {}. Follow these rules:
+&lt;blockquote&gt;
+&lt;p&gt;🧘‍♂️ &lt;em&gt;do one thing and do better&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id="about-me"&gt;About Me&lt;/h2&gt;
+&lt;p&gt;Hi, I&amp;rsquo;m &lt;strong&gt;Jesse&lt;/strong&gt;! I&amp;rsquo;m passionate about exploring the intersections of technology, philosophy, and science.&lt;/p&gt;
+&lt;h3 id="currently-learning--exploring"&gt;Currently Learning &amp;amp; Exploring&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;🌱 &lt;strong&gt;blog_os&lt;/strong&gt; and &lt;strong&gt;Rust compiler&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;🚧 &lt;strong&gt;rCore&lt;/strong&gt; and Algorithms&lt;/li&gt;
+&lt;li&gt;📝 &lt;strong&gt;Qiskit&lt;/strong&gt; (Quantum Computing) and &lt;strong&gt;LLMs&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="interests"&gt;Interests&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Philosophy&lt;/strong&gt; │ &lt;strong&gt;Physics&lt;/strong&gt; │ &lt;strong&gt;Mathematics&lt;/strong&gt; │ &lt;strong&gt;Analysis&lt;/strong&gt; │ &lt;strong&gt;Signals&lt;/strong&gt; │ &lt;strong&gt;Music&lt;/strong&gt;&lt;/p&gt;</description></item><item><title>写作规范与命名规范</title><link>https://JiashuaiXu.github.io/posts/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</link><pubDate>Mon, 20 Jan 2025 10:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/%E5%86%99%E4%BD%9C%E8%A7%84%E8%8C%83%E4%B8%8E%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/</guid><description>博客写作与文件命名规范，包含双链笔记的使用指南</description></item><item><title/><link>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://JiashuaiXu.github.io/copilot/copilot-custom-prompts/emojify/</guid><description>&lt;p&gt;Add relevant emojis to enhance {}. Follow these rules:
 1. Insert emojis at natural breaks in the text
 2. Never place two emojis next to each other
 3. Keep all original text unchanged

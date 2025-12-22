@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>点云 on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/%E7%82%B9%E4%BA%91/</link><description>Recent content in 点云 on Jesse's Blog</description><generator>Hugo -- 0.153.1</generator><language>zh-cn</language><lastBuildDate>Mon, 22 Dec 2025 13:00:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/%E7%82%B9%E4%BA%91/feed.xml" rel="self" type="application/rss+xml"/><item><title>RealSense D455 语义 SLAM：从 RGB-D 到语义八叉树地图</title><link>https://JiashuaiXu.github.io/posts/realsense-d455-semantic-slam-octomap/</link><pubDate>Mon, 22 Dec 2025 13:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/realsense-d455-semantic-slam-octomap/</guid><description>使用 RealSense D455 实现语义 SLAM 并生成语义八叉树地图（Semantic OctoMap），整合 RTAB-Map、YOLOv8-seg 等技术栈，完成从 RGB-D 数据到 3D 语义地图的完整流程。</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>点云 on Jesse&#39;s Blog</title>
+    <link>https://JiashuaiXu.github.io/tags/%E7%82%B9%E4%BA%91/</link>
+    <description>Recent content in 点云 on Jesse&#39;s Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 22 Dec 2025 13:00:00 +0800</lastBuildDate>
+    <atom:link href="https://JiashuaiXu.github.io/tags/%E7%82%B9%E4%BA%91/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RealSense D455 语义 SLAM：从 RGB-D 到语义八叉树地图</title>
+      <link>https://JiashuaiXu.github.io/posts/realsense-d455-semantic-slam-octomap/</link>
+      <pubDate>Mon, 22 Dec 2025 13:00:00 +0800</pubDate>
+      <guid>https://JiashuaiXu.github.io/posts/realsense-d455-semantic-slam-octomap/</guid>
+      <description>使用 RealSense D455 实现语义 SLAM 并生成语义八叉树地图（Semantic OctoMap），整合 RTAB-Map、YOLOv8-seg 等技术栈，完成从 RGB-D 数据到 3D 语义地图的完整流程。</description>
+    </item>
+  </channel>
+</rss>

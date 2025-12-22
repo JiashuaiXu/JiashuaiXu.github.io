@@ -1,36 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>笔记 on Jesse&#39;s Blog</title>
-    <link>https://JiashuaiXu.github.io/tags/%E7%AC%94%E8%AE%B0/</link>
-    <description>Recent content in 笔记 on Jesse&#39;s Blog</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Tue, 11 Nov 2025 17:00:00 +0800</lastBuildDate>
-    <atom:link href="https://JiashuaiXu.github.io/tags/%E7%AC%94%E8%AE%B0/feed.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Obsidian 与 Hugo 完美集成</title>
-      <link>https://JiashuaiXu.github.io/posts/obsidian-integration/</link>
-      <pubDate>Tue, 11 Nov 2025 17:00:00 +0800</pubDate>
-      <guid>https://JiashuaiXu.github.io/posts/obsidian-integration/</guid>
-      <description>&lt;h1 id=&#34;obsidian-与-hugo-完美集成&#34;&gt;Obsidian 与 Hugo 完美集成&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>笔记 on Jesse's Blog</title><link>https://JiashuaiXu.github.io/tags/%E7%AC%94%E8%AE%B0/</link><description>Recent content in 笔记 on Jesse's Blog</description><generator>Hugo -- 0.153.1</generator><language>zh-cn</language><lastBuildDate>Tue, 11 Nov 2025 17:00:00 +0800</lastBuildDate><atom:link href="https://JiashuaiXu.github.io/tags/%E7%AC%94%E8%AE%B0/feed.xml" rel="self" type="application/rss+xml"/><item><title>Obsidian 与 Hugo 完美集成</title><link>https://JiashuaiXu.github.io/posts/obsidian-integration/</link><pubDate>Tue, 11 Nov 2025 17:00:00 +0800</pubDate><guid>https://JiashuaiXu.github.io/posts/obsidian-integration/</guid><description>&lt;h1 id="obsidian-与-hugo-完美集成"&gt;Obsidian 与 Hugo 完美集成&lt;/h1&gt;
 &lt;p&gt;使用 Obsidian 管理笔记内容，通过 Git 子模块连接到 Hugo 站点。&lt;/p&gt;
-&lt;h2 id=&#34;优势&#34;&gt;优势&lt;/h2&gt;
+&lt;h2 id="优势"&gt;优势&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;📝 在 Obsidian 中舒适地写作&lt;/li&gt;
 &lt;li&gt;🔄 通过 Git 版本控制&lt;/li&gt;
 &lt;li&gt;🚀 自动发布到博客&lt;/li&gt;
 &lt;li&gt;🎨 保持 Markdown 格式一致&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;工作流&#34;&gt;工作流&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 1. 在 Obsidian 中编写&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 2. 提交到 obsidian-notes 仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#f1fa8c&#34;&gt;&amp;#34;New article&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#6272a4&#34;&gt;# 3. GitHub Actions 自动完成剩余工作！&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完美的写作体验！✨&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h2 id="工作流"&gt;工作流&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 1. 在 Obsidian 中编写&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 2. 提交到 obsidian-notes 仓库&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git add .
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git commit -m &lt;span style="color:#f1fa8c"&gt;&amp;#34;New article&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;git push
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#6272a4"&gt;# 3. GitHub Actions 自动完成剩余工作！&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完美的写作体验！✨&lt;/p&gt;</description></item></channel></rss>
